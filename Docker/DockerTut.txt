@@ -1,0 +1,189 @@
+1. Command to pull an image from docker repository
+	docker pull library_name
+
+2. Command to run an image from docker repository
+	docker run library_name
+
+	After running the above command, the image would run. We can pass on commands to run on that image as follows:
+		docker run -it(to directly login to the image) centos(library_name) bash(command)
+		
+3. Exit the image using the command: exit
+
+4. List the images downloaded.
+	docker images
+
+
+5. Check the status of running containers.
+	docker ps
+
+5. Check the status of running as well as exited containers(that have run previously).
+	docker ps -a
+	
+6. Delete a created image(still present as downloaded, only the image that was run is removed)
+	docker rm container_name/ container_id.
+	
+7. When we run a container and it exits, it actually still lives on the disk drive. We can reclaim that space using the "docker rm id/name" command.
+
+8. To stop a running docker container.
+	docker stop container_id / container_name (id/name can be viewed using ps -a).
+	
+9. To remove a downloaded image.
+	docker rmi image_name
+	
+	To delete any image, you would need to delete any containers that are running or have previously run previously(dead) for that image.
+	
+10.To run a command in the background(-d) i.e. detached mode on the container.
+	docker run -d ubuntu sleep 1000
+	
+	The above command runs sleep on an ubuntu container in the background.
+	
+	To attach back to a container output, use "docker attach container_id" command.
+	
+11.To run a command on a running container.
+	docker exec [container_id] [command]
+	
+12.To download or install a specific version of an image use tag:
+	docker run redis:4.0   Here, 4.0 is the tag or the version. Default tag is latest.
+	
+13.To interact with the Docker container's terminal, use -i flag. By default containers are not interactive and we have to map the standard input of our terminal to the Docker's terminal. The -i flag does the same.
+	docker run -i image
+
+14.Similarly we can attach to the contianer's terminal to see the output generated on the container's terminal using the -t flag.
+	docker run -it image
+	
+15. Port Mapping. Suppose we run a webapp on a docker container. Now we want to access the api's exposed by it through a port. How can we access the api's and through which port. We can only access the Docker container's port from the system(OS) that is running the container. Now we need to map this to access this from outside this host. This is where port mapping comes in. We map a port of the container to one of the ports of our operating system.
+	sudo docker run -p 80:5000 kodekloud/webapp
+	
+	Here, we have mapped the docker container's port 5000 to the port 80 of machine hosting the image and container.
+	This way we can map multiple instances of the same image(different containers) to different ports, and thus handle requests parallely.
+	
+16.Data Persistence: When we run a command like: docker run mysql, We get the data stored in a location as /var/lib/mysql in that container. There is an isolated file system on the docker container that has been created. I you delete the container, then all of the data gets deleted. To persist this data, we need to map a directory outside the container(i.e. on container host/ system hosting the container/ laptop in our case) to a directory inside the container. Like:	
+
+	docker run -v /opt/datadir:/var/lib/mysql mysql
+	
+	This way the directory on the host is mounted inside the container, and the data is persisted on the host even after deleting the container.
+	
+17.Run "docker inspect container_id" to get all the details about a container.
+	
+18.Run "docker logs container_id" command to get a log of all the commands that ran on that container.
+	
+19.We have different ways of persisting the data and state from the docker container even after the container is terminated, by mapping the data or state to the docker host(machine running docker). Thus, we don't lose the data even after the container is terminated.
+	
+	
+* Creating our own image for our application.
+Process for the same
+
+Step 1: Create a Docker file named Dockerfile and write down the instructions that you need to setup the environment locally for deployment.
+		Eg: 
+		
+		**** Base OS *****
+		FROM Ubuntu
+		
+		
+		**** Get updates and install requirements/ dependencies *****
+		RUN apt-get update
+		RUN apt-get install python
+		
+		
+		**** Getting python packages installed *****
+		RUN pip install flask
+		RUN pip instal flask-mysql
+		
+		
+		**** Copy the source code to the container at the mentioned location from current directory *****
+		COPY . /opt/source-code
+		
+		
+		**** Command to run *****
+		ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+		
+	This Docker file has Instructions and Arguments. The instructions are on the left(IN CAPS) and arguments are on the right. All DOcker file start from "FROM" instruction.
+	
+	Now, to build this image use this command
+	
+		docker build Dockerfile -t sarthak/my-custom-image
+		
+	Here, Dockerfile is the name of the setup Docker file as input, and the -t flag specifies the tag name of your image. This creates an image locally on the system(laptop/ docker host). To make it available publicly use this command.
+	
+		docker push sarthak/my-custom-image
+		
+	Before pushing your repository to docker hub using above command you would need to login using dockerhub credentials using the command "docker login"
+	
+	Here, sarthak is the name of your Docker account you are registered through.
+	
+	We can use "docker history image_name" command to get the history of the image created, i.e. what steps were followed for the same. 
+	
+	The Docker image creation is done layer by layer. And each layer only has the knowledge(or stores the changes) of what the closest previous layer did. There is caching in each layer and if there is a failure in a layer, the image creation can start from that point of failure only taking the previous remnants from cache or if you add new steps to  the build process, then also it can start from a previously cached layer.
+	
+	
+20.Set an environment variable using -e flag. For eg:  docker run -e APP_COLOR=blue container_name. To check the list and values of current environment variables use docker inspect container_name command, and see under config section.
+		
+		
+21.We can use the ENTRYPOINT to get the parameters directly from a command line. For eg for the below Dockerfile(container_name = ubuntu-sleeper):
+		FROM ubuntu 
+		
+		ENTRYPOINT ["sleep"]
+		
+		CMD ["5"]
+	Now, we can pass in the number of seconds to sleep from command line as follows: docker run ubuntu-sleeper 10
+	
+	We can specify the CMD command for default parameter to the ENTRYPOINT
+	
+	We can also use --entrypoint flag to use the entrypoint given in command line like: docker run --entrypoint sleep2.0 ubuntu-sleeper 10
+		
+		
+22.We can use docker compose files also for better structuring and readability.
+	
+	
+23.Linking different applications can be achieved using "--link" flag. So, if a container needs another container then we can use --link and the required container name as follows.
+		
+	
+24.We should use docker compose for the above by writing a docker-compose.yml file and running it using the docker-compose up command.
+	The docker-compose.yaml file looks like this.	
+		
+		redis:
+        image: redis
+
+		db:
+				image: postgres:9.4
+
+
+		vote:
+				image: voting-app
+				ports:
+						- 5000:80
+				links:
+						- redis
+
+		worker:
+				image: worker-app
+				links:
+						- db
+						- redis
+
+		result:
+				image: result-app
+				ports:
+						- 5001:80
+				links:
+						- db
+		                  
+						  
+25.Components of Docker engine:
+		a. Docker CLI : the user interface that we see
+		b. Docker REST API : The APIs that are hit when we are interacting with Docker CLI, which further passes on instructions to Docker daemon.
+		c. Docker Daemon
+	Command to run docker on a remote server
+		docker -H=10.123.2.1:2375 run nginx
+	
+	
+	
+26.We can use the host network to directly use the ports of the container host for docker images deployment.
+		docker run ubuntu --network=host
+		
+	  The default network starts with 172.17.0.1, and when we don't use the network flag, we can communicate between the created containers.
+	  Using none. docker run ubuntu --network=none . No communication between the created containers.
+		
+		
+		
+27.Docker Swarm and Kubernetes (Orchestration tools), for multiple instances for scaling based on requests or usage. Cluster Creation
