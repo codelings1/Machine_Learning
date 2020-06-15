@@ -1,0 +1,114 @@
+https://www.youtube.com/watch?v=zJW57aCBCTk
+1. In the original pre-processing code, we randomly select WordPiece tokens to mask. For example:
+
+	Input Text: the man jumped up , put his basket on phil ##am ##mon ' s head Original Masked Input: [MASK] man [MASK] up , put his [MASK] on phil [MASK] ##mon ' s head
+
+	The new technique is called Whole Word Masking. In this case, we always mask all of the the tokens corresponding to a word at once. The overall masking rate remains the same.
+
+	Whole Word Masked Input: the man [MASK] up , put his basket on [MASK] [MASK] [MASK] ' s head
+
+	The training is identical -- we still predict each masked WordPiece token independently. The improvement comes from the fact that the original prediction task was too 'easy' for words that had been split into multiple WordPieces.
+
+	This can be enabled during data generation by passing the flag --do_whole_word_mask=True to create_pretraining_data.py.
+
+
+2.  What is BERT?
+	BERT is a method of pre-training language representations, meaning that we train a general-purpose "language understanding" model on a large text corpus (like Wikipedia), and then use that model for downstream NLP tasks that we care about (like question answering). BERT outperforms previous methods because it is the first unsupervised, deeply bidirectional system for pre-training NLP.
+
+	Unsupervised means that BERT was trained using only a plain text corpus, which is important because an enormous amount of plain text data is publicly available on the web in many languages.
+
+	Pre-trained representations can also either be context-free or contextual, and contextual representations can further be unidirectional or bidirectional. Context-free models such as word2vec or GloVe generate a single "word embedding" representation for each word in the vocabulary, so bank would have the same representation in bank deposit and river bank. Contextual models instead generate a representation of each word that is based on the other words in the sentence.
+
+
+
+3.  BERT uses a simple approach for this: We mask out 15% of the words in the input, run the entire sequence through a deep bidirectional Transformer encoder, and then predict only the masked words. For example:
+
+	Input: the man went to the [MASK1] . he bought a [MASK2] of milk.
+	Labels: [MASK1] = store; [MASK2] = gallon
+
+	We then train a large model (12-layer to 24-layer Transformer) on a large corpus (Wikipedia + BookCorpus) for a long time (1M update steps), and that's BERT.
+
+	Using BERT has two stages: Pre-training and fine-tuning.
+
+	Pre-training is fairly expensive (four days on 4 to 16 Cloud TPUs), but is a one-time procedure for each language (current models are English-only, but multilingual models will be released in the near future). We are releasing a number of pre-trained models from the paper which were pre-trained at Google. Most NLP researchers will never need to pre-train their own model from scratch.
+
+	Fine-tuning is inexpensive. All of the results in the paper can be replicated in at most 1 hour on a single Cloud TPU, or a few hours on a GPU, starting from the exact same pre-trained model. SQuAD, for example, can be trained in around 30 minutes on a single Cloud TPU to achieve a Dev F1 score of 91.0%, which is the single system state-of-the-art.
+
+	The other important aspect of BERT is that it can be adapted to many types of NLP tasks very easily. In the paper, we demonstrate state-of-the-art results on sentence-level (e.g., SST-2), sentence-pair-level (e.g., MultiNLI), word-level (e.g., NER), and span-level (e.g., SQuAD) tasks with almost no task-specific modifications.
+	
+	Uncased means that the text has been lowercased before WordPiece tokenization, e.g., John Smith becomes john smith. The Uncased model also strips out any accent markers. Cased means that the true case and accent markers are preserved. Typically, the Uncased model is better unless you know that case information is important for your task (e.g., Named Entity Recognition or Part-of-Speech tagging)
+
+
+
+4.  Each Bert model .zip file contains three items:
+
+	A TensorFlow checkpoint (bert_model.ckpt) containing the pre-trained weights (which is actually 3 files).
+	A vocab file (vocab.txt) to map WordPiece to word id.
+	A config file (bert_config.json) which specifies the hyperparameters of the model.
+
+
+5.  For task_name=COLA, the format of the tsv file should be like this.
+				user_id	       label	      alpha	text
+			0	0		1		a		"You fuck your dad."
+			1	1		0		a		"i really don't understand your point.\xa0 It ...
+			2	2		0		a		"A\\xc2\\xa0majority of Canadians can and has ...
+			3	3		0		a		"listen if you dont wanna get married to a man...
+			4	4		0		a		"C\xe1c b\u1ea1n xu\u1ed1ng \u0111\u01b0\u1edd...
+			
+		export BERT_BASE_DIR=/home/xavient/Downloads/cased_L-12_H-768_A-12
+		export DATA_DIR=/home/xavient/Downloads/insults_data
+
+		python run_classifier.py \
+		  --task_name=COLA \
+		  --do_train=true \
+		  --do_eval=true \
+		  --data_dir=$DATA_DIR \
+		  --vocab_file=$BERT_BASE_DIR/vocab.txt \
+		  --bert_config_file=$BERT_BASE_DIR/bert_config.json \
+		  --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt \
+		  --max_seq_length=128 \
+		  --train_batch_size=8 \
+		  --learning_rate=2e-5 \
+		  --num_train_epochs=3.0 \
+		  --output_dir=/home/xavient/Downloads/insults_data/insults_output/ --do_lower_case=False
+
+
+6.  ELMo and its predecessor (Peters et al., 2017,2018a) generalize traditional word embedding re-search along a different dimension. They extract context-sensitive features from a left-to-right and a right-to-left language model. The contextual rep-resentation of each token is the concatenation ofthe left-to-right and right-to-left representations. They basically work by predicting a word given the sentece before the word in left to right, and then predicting a word given the words in a sentence after that word when going from right to left.
+
+
+7.  In a Language Model(LM), we try to predict the next word based on the previously occuring words and context.
+
+
+8.  CBOW: The input to the model could be wi−2,wi−1,wi+1,wi+2, the preceding and following words of the current word we are at. The output of the neural network will be wi
+
+	. Hence you can think of the task as "predicting the word given its context"
+	Note that the number of words we use depends on your setting for the window size.
+
+	Skip-gram: The input to the model is wi
+	, and the output could be wi−1,wi−2,wi+1,wi+2
+
+	. So the task here is "predicting the context given a word". In addition, more distant words are given less weight by randomly sampling them. When you define the window size parameter, you only configure the maximum window size. The actual window size is randomly chosen between 1 and max size for each training sample, resulting in words with the maximum distance being observed with a probability of 1/c while words directly next to the given word are always(!) observed. (correction thanks to Christina Korger )
+
+	According to Mikolov:
+
+		Skip-gram: works well with small amount of the training data, represents well even rare words or phrases.
+		CBOW: several times faster to train than the skip-gram, slightly better accuracy for the frequent words
+		This can get even a bit more complicated if you consider that there are two different ways how to train the models: the normalized hierarchical softmax, and the un-normalized negative sampling. Both work quite differently.
+
+	which makes sense since with skip gram, you can create a lot more training instances from limited amount of data, and for CBOW, you will need more since you are conditioning on context, which can get exponentially huge.
+
+
+9.  Usage
+	This model is called as follows on tokenized text input, an input mask to hold out padding tokens, and segment types when input mixes with different segments.
+
+	max_seq_length = 128  # Your choice here.
+	input_word_ids = tf.keras.layers.Input(shape=(max_seq_length,), dtype=tf.int32,
+										   name="input_word_ids")
+	input_mask = tf.keras.layers.Input(shape=(max_seq_length,), dtype=tf.int32,
+									   name="input_mask")
+	segment_ids = tf.keras.layers.Input(shape=(max_seq_length,), dtype=tf.int32,
+										name="segment_ids")
+	bert_layer = hub.KerasLayer("https://tfhub.dev/tensorflow/bert_en_uncased_L-12_H-768_A-12/1",
+								trainable=True)
+	pooled_output, sequence_output = bert_layer([input_word_ids, input_mask, segment_ids])
+	

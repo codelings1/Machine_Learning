@@ -1,0 +1,206 @@
+1.  LinkedIn
+	Step1: Converts titles like Data Mining Scientist and related terms to canonical form as "Data Scientist". This is done using a Binary Classifier. This is based on the metadata like skills of the users.
+	
+2.  Google Home, Siri
+	Using Graph database based on semantic standards.
+	So if we had all of this working, we would be able to do the following things:
+
+	Identify use cases that could benefit from knowledge graphs, quick create them, and then evolve them to greater maturity.
+	Present users with a guided process to use the information in the knowledge graph.
+	Gradually expand the scope of the data integrated in a knowledge graph, allowing links between graphs to make them more powerful.
+	Create advanced applications and dashboards for high value use cases
+	We have wanted to expand data integration and deliver data to those who need it for a long time. Knowledge graphs just help us do a better job.
+	
+	
+3.	How Cambridge Semantics Approaches this Problem
+
+	Cambridge Semantics unlocks the power of the knowledge graph by providing all the elements needed to create a knowledge graph factory.  At the center of the factory is the AnzoGraph OLAP database that allows graphs to be stored and explored with queries, algorithms, and analytics.
+	
+4.  Wikipedia uses DeepDive (https://meta.wikimedia.org/wiki/Research:Wikipedia_Knowledge_Graph_with_DeepDive)
+	DeepDive is a project led by Christopher Ré at Stanford University. It is a new type of data analysis system that enables developers to extract structured relations from raw text and can achieve very high quality beating human volunteers in highly specific tasks. 
+	
+	To extract the knowledge graph relations at a large scale, we used a dump of English Wikipedia of February 2015. This very rich and large data set of 100Gb was already parsed using the Stanford NLP parser and it contains NLP information such as Name Entity Recognition (NER) and Part Of Speech (POS) tags as well as dependency paths. As we detail in the implementation section, we preprocessed this data for efficiency and correctness reasons.
+
+	Populating a knowledge graph of the size of Wikidata is a tremendous task. Therefore, we tried to focus on relations we believe users are usually looking for and that are immutable over time. Starting with relation (company,founder) that involved getting started with DeepDive and its ecosystem, we then moved to the ambitious and large scale project of family tree including spouses, parents, children and siblings. In this section, we detail these applications one by one focusing on pipelines and tasks we performed. A high level view of the pipeline is presented in figure 1. To do so, we find people and company mentions within the same sentence using mainly NER tags and post-process them to complete the names or eliminate the possible errors of the tags.his actual sentence from Wikipedia: ”Eric Emerson Schmidt is an American software engineer, businessman, and the executive chairman of Google.”, Eric Schmidt and Google appeared in the same sentence. They would then be considered as candidates for company-founder relation. However, in our positive examples from Freebase, we know that Google's founders are Larry Page and Sergey Brin. Therefore, Google - Eric Schmidt will be immediately considered as negative example. This method is called distant supervision and allowed us to obtain hundreds of thousands of negative examples that we later sampled down to keep a fair distribution between positive and negative examples. The rest of the candidates are tagged Null and are considered for inference.
+
+5.  How Google uses knowledge graph:(https://benjaminbeck.com/serp-optimization-knowledge-graph/)
+	Semantic Search – The first part of the Knowledge Graph is Google’s understanding of Semantic Search, which is where they strive to understand the searchers intent and contextual meaning of the terms. Google gains a better understanding of the context of the term by taking the search term and putting it through some of these filters:
+
+		○      word variations
+
+		○      word synonyms
+
+		○      concept matching
+
+		○      natural language
+
+		○      IP location
+
+	Entity Search – As Google continues to index and organize everything online they need to connect relationships between things to make “entities”. For example if you search for the “Drew Carey” Google is able to find his relationships with all the movies, television shows, upcoming events, etc for him as an entity.
+
+	User Behavior – The last major factor in Google’s Knowledge Graph is user behavior. For example when we did a search for “What is the Knowledge Graph?” the answer came from Wikipedia and not from Google  who is the creator of the Knowledge Graph. This may be an example of how Google is looking at websites that have high click through rates and low bounce rates compared to other websites in the space.
+
+
+6.  How different teams are using the knowledge graphs(https://queue.acm.org/detail.cfm?id=3332266)
+	As one of the initial steps, we need to decide the ontology for creating the knowledge graph, i.e. the types of entities and relations that we are planning to incorporate in the knowledge graph. The Knowledge Graph also recognizes that certain kinds of interactions can take place with different entities. A query for "The Russian Tea Room" provides a button to make a reservation, while a query for "Rita Ora" provides links to her music on various music services.
+	Facebook's knowledge graph focuses on the most socially relevant entities, such as those that are most commonly discussed by its users: celebrities, places, movies, and music. As the Facebook knowledge graph continues to grow, developers focus on those domains that have the greatest chance of delivering utility and delightful user experiences.
+	
+7.  We can use jsonld and schema.org for creation of these relations and entities. Then thesse are pushed to a graph database called triples. Cayley is an open sourced database used for linked data.(https://www.youtube.com/watch?v=0oOwrBEeQss)
+		JSONLD using Schema.org vocabulary and passing to a crawler ----gives----> Linked Data ----passed to-----> Cayley(Generates graph and visualizations)
+		
+		We can use the freedumps data provided by Google for this use case, by using grep for the type of data we are hoping to find.(https://developers.google.com/freebase)
+		
+8.  IBM's framework: (https://queue.acm.org/detail.cfm?id=3332266)
+		Some of the key technologies built into the framework include document conversion, document extraction, passage storage, and entity normalization.
+		
+9.  Knowledge extraction from multiple structured and unstructured sources
+Despite the recent advances in natural language understanding, the extraction of structured knowledge (which includes entities, their types, attributes, and relationships) remains a challenge across the board. Growing the graphs at scale requires not only manual approaches, but also unsupervised and semi-supervised knowledge extraction from unstructured data in open domains.
+
+For example, in the eBay Product Knowledge Graph, many graph relationships are extracted from unstructured text in listings and seller catalogs; the IBM Discovery knowledge graph relies on documents as evidence for the facts represented in the graphs. Traditional supervised machine-learning frameworks require labor-intensive human annotations to train knowledge-extraction systems. This high cost can be alleviated or eliminated by adopting fully unsupervised approaches (clustering with vector representations) or semi-supervised techniques (distant supervision with existing knowledge, multi-instance learning, active learning, etc.). Entity recognition, classification, text, and entity embeddings all prove useful tools to link our unstructured text to entities we know about in the graph.
+
+
+10.  Knowledge graphs by definition are enormous, since they aspire to create an entity for every noun in the world, and thus can only reasonably run in the cloud. Realistically, however, most people don't care about all entities that exist in the world, but rather a small fraction or subset that is personally relevant to them. There is a lot of promise in the area of personalizing knowledge graphs for individual users, perhaps even to the extent that they can shrink to a small enough size to be shippable to mobile devices. This will allow developers to keep providing user value in a privacy-respecting manner by doing more on-device learning and computation, over local small knowledge-graph instances. (We're eager to collaborate with the research community in pursuit of this goal.)
+
+11.  Knowledge Graph Creation paper(https://www.youtube.com/watch?v=jOugBeAST_Q)   (https://github.com/KiranMayeeMaddi/NLP)
+		neo4j for graph database and Cypher for Querying the graph.
+		
+12.  Ontology is basically a schema or metadata. Like taking a friend relation can be a type of ontology.(https://www.youtube.com/watch?v=Np768VAe_7I)
+
+13.  Open Domain and Closed Domain knowledge graphs, i.e. when the domain of ontology is defined and not defined respetively.
+
+
+
+Findings:
+
+Need to have a set of relations defined i.e the ontology defined to deduce the defined relations from which to extract the data.
+or Open Domain KG.
+
+Many of the people are also using structured data for creating the Knowledge Graphs.
+
+Using Coreference to get a base entity for the same entity. i.e. pronouns need to be replaced by nouns it is pointing to.
+
+Spacy or StanfordNLP for NER and dependency deductions, and used the Triplets concept(Subject, Predicate and Object) for KG creation.
+
+
+Graph Databases that have been used : {neo4j + Cypher(Querying)}, {Cayley}
+
+Grakn.ai is used.
+
+Various methodologies for relation extraction can broadly be classified under the following three categories: Supervised, Semi Supervised, Distant supervision.(https://cse.iitk.ac.in/users/cs365/2015/_submissions/smanocha/report.pdf), (https://www.linkedin.com/pulse/build-knowledge-graph-from-unstructured-corpus-using-machine-anish), (https://medium.com/heuritech/knowledge-extraction-from-unstructured-texts-c279e3b8f92f)
+	Supervised: Domain specific. Like word2vec. China----> Beijing then India----> Delhi
+	Semi Supervised: Some of the most popular approaches as Dual Iterative Pattern Relation Extractor[Brin et al][7], Snowball, Text Runner are examples of semi supervised methods. These projects, however, rely heavily on the correctness of NLP tools like Named Entity Recognition and thus they may be prone to errors. In the
+case of above examples, we extract names of countries from the word embedding space. Since country names appear in similar context, it is expected that
+they lie close together in the word embedding space. Once, the countries are
+extracted, they can be used to learn analogy as ’Spain’ is to ’Madrid’ is same as
+’Italy’ is to ’Rome’ to learn relations of type ’capital’. Similar approach can be
+used to extract relation in any language given their corresponding word embeddings independent of the syntactic structure of the sentence in that particular
+language.
+
+Triplet extraction can be done in a purely unsupervised way. Usually, the text is first parsed with several tools (such as TreeBank parser, MiniPar or OpenNLP parser) then the texts between entities (as well as the annotations from the parsers) are clustered and finally simplified. While attractive at the first look as no supervision is needed, there are a few drawbacks. First, it requires lots of tedious work to hand-craft rules which depend on the parser used. Moreover, the clusters found contain semantically related relations but they do not give us fine-grained implications. Typically, a cluster may contain “ is-capital-of “ and “ is-city-of “ which are semantically closed relations. However, with the unsupervised approach, we will fail to discover that “ is-capital-of “ implies the relation “ is-city-of “ and not the opposite.
+
+OpenIE by Stanford is also used for relation detection.(https://nlp.stanford.edu/software/openie.html)
+
+We can use a Knowledge Base by learning low-dimensional embeddings of words and of entities and relationships from a knowledge base.(https://arxiv.org/pdf/1307.7973.pdf). Wikidata and SparQL is used. This paper focuses on the problem of learning to
+perform relation extraction (RE) under weak supervision from a KB. RE is sub-task of IE that considers that entities have already been detected by a different process, such as a named-entity recognizer. RE then aims at assigning to a relation mention m (i.e. a sequence of text which states that some relation is true) the corresponding relationship from the KB, given a pair of extracted entities (h,t) as context. The task is said to be weakly supervised because for each pair of entities (h,t) detected in the text, all relation mentions m associated with them are labeled with all the relationships connecting h and t in the KB, whether they are actually expressed by m or not.
+
+Microsoft Course(https://courses.edx.org/courses/course-v1:Microsoft+DAT278x+3T2019/courseware/c56a47c7-907c-7866-5493-c08b06b2530e/957f694d-fe18-8683-21f3-29fd9274c1ad/?activate_block_id=block-v1%3AMicrosoft%2BDAT278x%2B3T2019%2Btype%40sequential%2Bblock%40957f694d-fe18-8683-21f3-29fd9274c1ad)
+
+DBPedia, YAGO can be used for public knowledge base data.
+
+3 steps : NER --> Entity Linking(Links free text mentions to entities. The entities are usually taken from KB like Freebase or Wikipedia)
+
+Entity Linking taks:(https://courses.edx.org/courses/course-v1:Microsoft+DAT278x+3T2019/courseware/c56a47c7-907c-7866-5493-c08b06b2530e/d31a9c44-2b63-2bb2-adff-b57df3a21277/?child=first)
+	1. Determine linkable phrases, i.e. mention detection 
+	2. Generate candidate entities which can be linked to the mentions detected.
+	3. Use contect to filter out candidates to get a final entities to link to detected mentions. This is done based on commonness of the word and relatedness of the word with the surrounding context. 
+	
+	
+	
+	
+	
+**********************
+Methods for relation extraction(https://courses.edx.org/courses/course-v1:Microsoft+DAT278x+3T2019/courseware/c56a47c7-907c-7866-5493-c08b06b2530e/d31a9c44-2b63-2bb2-adff-b57df3a21277/?child=first) (https://www.aclweb.org/anthology/P09-1113.pdf)
+
+SemiSupervised(Bootstrapping method): When can we apply Bootstrapping approach? It is when we do not have enough annotated text for training. However, we do have some seed instances of the relation, and a lot of unannotated text or documents. In this sense, the Bootstrapping approach can be considered as a semi-supervised learning. Let's look at an example to see how this works. If our target relation is acquisition, and we have the seed tuples entities, as Microsoft and the LinkedIn. Then, we can use search engine to search with both entity names, Microsoft and the LinkedIn. We can see results, like Microsoft has acquired LinkedIn. Microsoft buys LinkedIn. These can be generalized to patterns like X has acquired Y. X buys Y. Then, we can use these patterns to find new tuples from those unannotated documents. The Bootstrapping method looks very straight forward and easy to achieve, but it has some limitations. First of all, it requires seeds for each relation, and the result quality is sensitive to the original sets of seeds. Secondly, the semantics could be drifted after several iterations. And the result precision tends to be not very high. At last, there is no probabilistic interpretations on the resulting relations. Hence, it's hard to judge how confident it is for each result.
+
+
+Supervised Method: For such a supervised task for each pair of entities in the sentence it aims to predict the relation type that holds between them if there is any. So, this approach requires predefining an inventory of relation types. Collecting labeled training data, this is very hard and expensive. Then designing feature representation and choose classifiers and then evaluate results. Here are some examples for human labeled positive and negative training data such as Elon Musk is the CEO of SpaceX with a triple, Elon Musk, CEO, SpaceX. There are some traditional datasets in the NLP communities to exercise and evaluate the relation extraction task. The obvious pros on the supervised approach is that it can achieve high accuracy, when we have lots of human labeled training data. However, its limitation is also obvious. That is very expensive and slow to collect labeled data and it also doesn't generalize well on different relations or languages.
+
+
+Distantly Supervised: To enable distant supervision it had below two basic assumptions. First, is existing knowledge base already have very rich information. From this table, we can see the largest relations from free base. It's in the size of tens of thousands or hundreds of thousands. Second, is existing knowledge base together with unlabeled text can generate decent quality training examples. This requires to locate the pairs of related entities in the unstructured text. And it hypothesizes that such relation is expressed in the text. The pro side is it has advantage of both supervised and unsupervised methods. On supervised side, it can leverage rich, reliable, hand-created knowledge and all relations have canonical names with rich features. On unsupervised side, it can scale, and leverage unlimited amount of text data, allows large number of weak features, and more importantly, it is not sensitive to training corpus and can generalize to different domains. Sounds very attractive and exciting, right? The only cons of this approach is it requires very high quality entity matching between text and existing knowledge graph, which is a foundation to create the training data with scale.
+
+
+
+*************************
+Paper:   Distant supervision for relation extraction without labeled data(https://www.aclweb.org/anthology/P09-1113.pdf)(https://github.com/cgpotts/cs224u/blob/master/rel_ext_01_task.ipynb)(https://www.youtube.com/watch?v=pO3Jsr31s_Q)
+
+For each pair of enti-ties that appears in some Freebase relation, we findall sentences containing those entities in a large un-labeled corpus and extract textual features to traina  relation  classifier.   Our  algorithm  combines  theadvantages  of  supervised  IE  (combining  400,000noisy  pattern  features  in  a  probabilistic  classifier)and  unsupervised  IE  (extracting  large  numbers  ofrelations from large corpora of any domain).  Ourmodel is able to extract 10,000 instances of 102 re-lations  at  a  precision  of  67.6%. 
+
+Closed Domain:
+In  supervised  approaches,  sentences  in  a  cor-pus are first hand-labeled for the presence of en-tities and the relations between them.  The NISTAutomatic Content Extraction (ACE) RDC 2003and 2004 corpora, for example, include over 1,000documents in which pairs of entities have been la-beled with 5 to 7 major relation types and 23 to24 subrelations, totaling 16,771 relation instances.
+
+A third approach has been to use a very small number of seed instances or patterns to do boot-strap learning (Brin, 1998; Riloff and Jones, 1999;Agichtein and Gravano, 2000; Ravichandran andHovy,  2002;  Etzioni  et  al.,  2005;  Pennacchiottiand  Pantel,  2006;  Bunescu  and  Mooney,  2007;Rozenfeld and Feldman, 2008).  These seeds are used  with  a  large  corpus  to  extract  a  new  set  of patterns, which are used to extract more instances,which are used to extract more patterns, in an it-erative fashion. The resulting patterns often suffer from low precision and semantic drift.(Relations are defined, we keep on getting semantically similar relations from the text, then make them the labelled data, then again iterate over the data and unstrutured text to get more similar relations)
+
+Open Domain.
+An  alternative  approach,  purely  unsupervised information  extraction,  extracts  strings  of  wordsbetween  entities  in  large  amounts  of  text,  andclusters and simplifies these word strings to pro-duce relation-strings (Shinyama and Sekine, 2006;Banko et al., 2007). Unsupervised approaches canuse  very  large  amounts  of  data  and  extract  verylarge numbers of relations, but the resulting rela-tions may not be easy to map to relations neededfor a particular knowledge base.
+
+------
+
+We propose an alternative paradigm,distant su-pervision, that combines some of the advantagesof each of these approaches:
+Our algorithm uses Freebase (Bollacker etal.,  2008),  a large  semantic database,  to providedistant supervision for relation extraction.   Free-base contains 116 million instances of 7,300 rela-tions between 9 million entities.The intuition ofdistant supervision is that any sentence that con-tains a pair of entities that participate in a knownFreebase relation is likely to express that relationin some way.  Since there may be many sentencescontaining a given entity pair, we can extract verylarge numbers of (potentially noisy) features thatare combined in a logistic regression classifier. Thus whereas the supervised training paradigmuses a small labeled corpus of only 17,000 rela-tion instances as training data, our algorithm canuse much larger amounts of data: more text, morerelations, and more instances.  We use 1.2 millionWikipedia articles and 1.8 million instances of 102relations connecting 940,000 entities. In addition,combining vast numbers of features in a large clas-sifier helps obviate problems with bad features.Because   our   algorithm   is   supervised   by   adatabase,   rather  than  by  labeled  text,   it  doesnot  suffer  from  the  problems  of  overfitting  anddomain-dependence  that  plague  supervised  sys-tems.  Supervision by a database also means that,unlike in unsupervised approaches, the output ofour classifier uses canonical names for relations. Our paradigm offers a natural way of integratingdata from multiple sentences to decide if a relationholds between two entities. Because our algorithmcan use large amounts of unlabeled data, a pair ofentities may occur multiple times in the test set.For each pair of entities, we aggregate the featuresfrom  the  many  different  sentences  in  which  thatpair appeared into a single feature vector, allowingus to provide our classifier with more information,resulting in more accurate labels. We  use  relations  and  relation  instances  fromFreebase,  a  freely  available  online  database  ofstructured  semantic  data.Data  in  Freebase  iscollected  from  a  variety  of  sources.   One  majorsource  is  text  boxes  and  other  tabular  data  fromWikipedia.  Data is also taken from NNDB (bio-graphical information), MusicBrainz (music), theSEC (financial and corporate data), as well as di-rect,  wiki-style  user  editing.    After  some  basicprocessing  of  the  July  2008  link  export  to  con-vert Freebase’s data representation into binary re-lations,  we  have  116  million  instances  of  7,300relations between 9 million entities.  We next fil-ter out nameless and uninteresting entities such asuser profiles and music tracks. Freebase also con-tains the reverses of many of its relations (book-author v. author-book), and these are merged. Fil-tering  and  removing  all  but  the  largest  relationsleaves us with 1.8 million instances of 102 rela-tions connecting 940,000 entities.   Examples areshown in Table 2. In the training step, all entities are identified in sentences using a named entity tagger that la-bels persons, organizations and locations. If a sen-tence contains two entities and those entities are aninstance of one of our Freebase relations, featuresare extracted from that sentence and are added tothe feature vector for the relation. The intuition of ourdistant supervisionapproachis to use Freebase to give us a training set of rela-tions and entity pairs that participate in those rela-tions. In the training step, all entities are identified in sentences using a named entity tagger that la-bels persons, organizations and locations. If a sen-tence contains two entities and those entities are aninstance of one of our Freebase relations, featuresare extracted from that sentence and are added tothe feature vector for the relation.The distant supervision assumption is that if twoentities participate in a relation, any sentence thatcontain those two entities might express that rela-tion.   Because  any  individual  sentence  may  givean incorrect cue, our algorithm trains a multiclasslogistic regression classifier, learning weights foreach  noisy  feature.   In  training,  the  features  foridentical  tuples  (relation,  entity1,  entity2)  fromdifferent sentences are combined, creating a richerfeature vector.In the testing step, entities are again identifiedusing  the  named  entity  tagger.   This  time,  everypair of entities appearing together in a sentence isconsidered a potential relation instance, and when-ever those entities appear together, features are ex-tracted on the sentence and added to a feature vec-tor for that entity pair.  For example, if a pair ofentities occurs in 10 sentences in the test set, andeach sentence has 3 features extracted from it, theentity pair will have 30 associated features.  Eachentity pair in each sentence in the test corpus is runthrough feature extraction, and the regression clas-sifier predicts a relation name for each entity pairbased on the features from all of the sentences inwhich it appeared. Consider  thelocation-containsrelation,  imag-ining  that  in  Freebase  we  had  two  instances  ofthis  relation:〈Virginia, Richmond〉and〈France, Nantes〉.   As we encountered sen-tences like ‘Richmond, the capital of Virginia’ and‘Henry’s Edict of Nantes helped the Protestants ofFrance’ we would extract features from these sen-tences.  Some features would be very useful, suchas the features from the Richmond sentence, andsome  would  be  less  useful,  like  those  from  theNantes  sentence.   In  testing,  if  we  came  acrossa  sentence  like  ‘Vienna,  the  capital  of  Austria’,one or more of its features would match those ofthe  Richmond  sentence,  providing  evidence  that〈Austria, Vienna〉belongs  to  thelocation-containsrelation. Our system needs negative training data for thepurposes  of  constructing  the  classifier.   Towardsthis  end,  we  build  a  feature  vector  in  the  train-ing phase for an ‘unrelated’ relation by randomlyselecting  entity  pairs  that  do  not  appear  in  anyFreebase relation and extracting features for them.While it is possible that some of these entity pair are in fact related but are wrongly omitted fromthe Freebase data, we expect that on average thesefalse negatives will have a small effect on the per-formance of the classifier.   For performance rea-sons, we randomly sample 1% of such entity pairsfor use as negative training examples. By contrast,in the actual test data, 98.7% of the entity pairs weextract do not possess any of the top 102 relationswe consider in Freebase
+
+
+
+Paper:    Unsupervised Construction of Knowledge Graphs From Text and Code
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------
+
+Paper:   Identifying Relations for Open Information Extraction(https://www.aclweb.org/anthology/D11-1142.pdf)
+
+
+
+
+
+
+
+
+--------
+
+Paper:   Open Information Extraction from the Web(https://www.aaai.org/Papers/IJCAI/2007/IJCAI07-429.pdf)
+
+-- This paper introduces Open Information Extraction (OIE)— a novel extraction paradigm that facilitates domainindependent discovery of relations extracted from text and readily scales to the diversity and size of the Web corpus. The sole input to an OIE system is a corpus, and its output is a set of extracted relations. An OIE system makes a single pass over its corpus guaranteeing scalability with the size of the corpus.
+
+-- Information Extraction (IE) has traditionally relied on extensive human involvement in the form of hand-crafted extraction rules or hand-tagged training examples. Moreover, the user is required to explicitly pre-specify each relation of interest. While IE has become increasingly automated over time, enumerating all potential relations of interest for extraction by an IE system is highly problematic for corpora as large and varied as the Web. To make it possible for users to issue diverse queries over heterogeneous corpora, IE systems must move away from architectures that require relations to be specified prior to query time in favor of those that aim to discover all possible relations in the text. In the past, IE has been used on small, homogeneous corpora such as newswire stories or seminar announcements. As a result, traditional IE systems are able to rely on “heavy” linguistic technologies tuned to the domain of interest, such as dependency parsers and Named-Entity Recognizers (NERs). These systems were not designed to scale relative to the size of the corpus or the number of relations extracted, as both parameters were fixed and small.
+
+
+TEXTRUNNER consists of three key modules:
+1. Self-Supervised Learner: Given a small corpus sample as input, the Learner outputs a classifier that labels candidate extractions as “trustworthy” or not. The Learner requires no hand-tagged data.
+2. Single-Pass Extractor: The Extractor makes a single pass over the entire corpus to extract tuples for all possible relations. The Extractor does not utilize a parser. The Extractor generates one or more candidate tuples from each sentence, sends each candidate to the classifier, and retains the ones labeled as trustworthy.
+3. Redundancy-Based Assessor: The Assessor assigns a probability to each retained tuple based on a probabilistic model of redundancy in text introduced in [Downey et al., 2005].
+
+Tuple extraction in TEXTRUNNER happens in O(D) time,
+where D is the number of documents in the corpus. It subsequently takes O(T log T ) time to sort, count and assess the
+set of T tuples found by the system. In contrast, each time a
+traditional IE system is asked to find instances of a new set
+of relations R it may be forced to examine a substantial fraction of the documents in the corpus, making system run-time
+O(R · D). Thus, when D and R are large, as is typically
+the case on the Web, TEXTRUNNER’s ability to extract information for all relations at once, without having them named
+explicitly in its input, results in a significant scalability advantage over previous IE systems (including KNOWITALL)
+
+
+
+
+
+

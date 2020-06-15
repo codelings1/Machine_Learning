@@ -1,0 +1,1330 @@
+{
+  "clientRequestId" : "20190809070612006_8004",
+  "environment" : {
+    "dataset" : "bigquery.googleapis.com/cloud_dataflow",
+    "sdkPipelineOptions" : {
+      "options" : {
+        "workerDiskType" : null,
+        "dataflowEndpoint" : "",
+        "experiments" : null,
+        "project" : "dark-pipe-247510",
+        "overrideWindmillBinary" : null,
+        "network" : null,
+        "streaming" : false,
+        "enableCloudDebugger" : false,
+        "zone" : null,
+        "workerMachineType" : null,
+        "gcpTempLocation" : "gs://datasets14/temp/",
+        "numWorkers" : 0,
+        "runner" : "org.apache.beam.runners.dataflow.DataflowRunner",
+        "credentialFactoryClass" : "org.apache.beam.sdk.extensions.gcp.auth.GcpCredentialFactory",
+        "googleApiTrace" : null,
+        "jobName" : "sqldataflow-bs140598-0809070601-627df410",
+        "autoscalingAlgorithm" : null,
+        "appName" : "SqlDataflow",
+        "optionsId" : 0,
+        "maxNumWorkers" : 0,
+        "apiRootUrl" : "https://dataflow.googleapis.com/",
+        "userAgent" : "Google_Cloud_Dataflow_SDK_for_Java/2.5.0",
+        "serviceAccount" : null,
+        "stagingLocation" : "gs://datasets14/staging/",
+        "pipelineUrl" : "gs://datasets14/staging/pipeline-3yGAxEe73-yv4PzBWVa3JA.pb",
+        "stagerClass" : "org.apache.beam.runners.dataflow.util.GcsStager",
+        "labels" : null,
+        "tempLocation" : "gs://datasets14/temp/",
+        "stableUniqueNames" : "WARNING",
+        "saveProfilesToGcs" : null,
+        "numberOfWorkerHarnessThreads" : 0,
+        "gcsUploadBufferSizeBytes" : null,
+        "subnetwork" : null,
+        "filesToStage" : [ "/home/bs140598/dataflow-example/target/classes", "/home/bs140598/.m2/repository/com/google/cloud/dataflow/google-cloud-dataflow-java-sdk-all/2.5.0/google-cloud-dataflow-java-sdk-all-2.5.0.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-core/2.5.0/beam-sdks-java-core-2.5.0.jar", "/home/bs140598/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar", "/home/bs140598/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.5/jackson-annotations-2.9.5.jar", "/home/bs140598/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.jar", "/home/bs140598/.m2/repository/org/apache/avro/avro/1.8.2/avro-1.8.2.jar", "/home/bs140598/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar", "/home/bs140598/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar", "/home/bs140598/.m2/repository/com/thoughtworks/paranamer/paranamer/2.7/paranamer-2.7.jar", "/home/bs140598/.m2/repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar", "/home/bs140598/.m2/repository/org/xerial/snappy/snappy-java/1.1.4/snappy-java-1.1.4.jar", "/home/bs140598/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar", "/home/bs140598/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar", "/home/bs140598/.m2/repository/junit/junit/4.12/junit-4.12.jar", "/home/bs140598/.m2/repository/org/tukaani/xz/1.5/xz-1.5.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-io-google-cloud-platform/2.5.0/beam-sdks-java-io-google-cloud-platform-2.5.0.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-extensions-google-cloud-platform-core/2.5.0/beam-sdks-java-extensions-google-cloud-platform-core-2.5.0.jar", "/home/bs140598/.m2/repository/com/google/cloud/bigdataoss/gcsio/1.4.5/gcsio-1.4.5.jar", "/home/bs140598/.m2/repository/com/google/apis/google-api-services-cloudresourcemanager/v1-rev477-1.23.0/google-api-services-cloudresourcemanager-v1-rev477-1.23.0.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-extensions-protobuf/2.5.0/beam-sdks-java-extensions-protobuf-2.5.0.jar", "/home/bs140598/.m2/repository/com/github/stephenc/findbugs/findbugs-annotations/1.3.9-1/findbugs-annotations-1.3.9-1.jar", "/home/bs140598/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-core/1.2.0/grpc-core-1.2.0.jar", "/home/bs140598/.m2/repository/com/google/errorprone/error_prone_annotations/2.0.11/error_prone_annotations-2.0.11.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-context/1.2.0/grpc-context-1.2.0.jar", "/home/bs140598/.m2/repository/com/google/instrumentation/instrumentation-api/0.3.0/instrumentation-api-0.3.0.jar", "/home/bs140598/.m2/repository/com/google/apis/google-api-services-bigquery/v2-rev374-1.23.0/google-api-services-bigquery-v2-rev374-1.23.0.jar", "/home/bs140598/.m2/repository/com/google/api/gax-grpc/0.20.0/gax-grpc-0.20.0.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-protobuf/1.2.0/grpc-protobuf-1.2.0.jar", "/home/bs140598/.m2/repository/com/google/api/api-common/1.1.0/api-common-1.1.0.jar", "/home/bs140598/.m2/repository/com/google/auto/value/auto-value/1.2/auto-value-1.2.jar", "/home/bs140598/.m2/repository/com/google/api/gax/1.3.1/gax-1.3.1.jar", "/home/bs140598/.m2/repository/org/threeten/threetenbp/1.3.3/threetenbp-1.3.3.jar", "/home/bs140598/.m2/repository/com/google/cloud/google-cloud-core-grpc/1.2.0/google-cloud-core-grpc-1.2.0.jar", "/home/bs140598/.m2/repository/com/google/protobuf/protobuf-java-util/3.2.0/protobuf-java-util-3.2.0.jar", "/home/bs140598/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar", "/home/bs140598/.m2/repository/com/google/apis/google-api-services-pubsub/v1-rev382-1.23.0/google-api-services-pubsub-v1-rev382-1.23.0.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-cloud-pubsub-v1/0.1.18/grpc-google-cloud-pubsub-v1-0.1.18.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/proto-google-cloud-pubsub-v1/0.1.18/proto-google-cloud-pubsub-v1-0.1.18.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/proto-google-iam-v1/0.1.18/proto-google-iam-v1-0.1.18.jar", "/home/bs140598/.m2/repository/com/google/cloud/bigdataoss/util/1.4.5/util-1.4.5.jar", "/home/bs140598/.m2/repository/com/google/api-client/google-api-client-java6/1.20.0/google-api-client-java6-1.20.0.jar", "/home/bs140598/.m2/repository/com/google/api-client/google-api-client-jackson2/1.20.0/google-api-client-jackson2-1.20.0.jar", "/home/bs140598/.m2/repository/com/google/oauth-client/google-oauth-client/1.20.0/google-oauth-client-1.20.0.jar", "/home/bs140598/.m2/repository/com/google/oauth-client/google-oauth-client-java6/1.20.0/google-oauth-client-java6-1.20.0.jar", "/home/bs140598/.m2/repository/com/google/cloud/datastore/datastore-v1-proto-client/1.4.0/datastore-v1-proto-client-1.4.0.jar", "/home/bs140598/.m2/repository/com/google/http-client/google-http-client-protobuf/1.20.0/google-http-client-protobuf-1.20.0.jar", "/home/bs140598/.m2/repository/com/google/http-client/google-http-client-jackson/1.20.0/google-http-client-jackson-1.20.0.jar", "/home/bs140598/.m2/repository/com/google/cloud/datastore/datastore-v1-protos/1.3.0/datastore-v1-protos-1.3.0.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-common-protos/0.1.0/grpc-google-common-protos-0.1.0.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-auth/1.2.0/grpc-auth-1.2.0.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-netty/1.2.0/grpc-netty-1.2.0.jar", "/home/bs140598/.m2/repository/io/netty/netty-codec-http2/4.1.8.Final/netty-codec-http2-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-codec-http/4.1.8.Final/netty-codec-http-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-handler-proxy/4.1.8.Final/netty-handler-proxy-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-codec-socks/4.1.8.Final/netty-codec-socks-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-handler/4.1.8.Final/netty-handler-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-buffer/4.1.8.Final/netty-buffer-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-common/4.1.8.Final/netty-common-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-transport/4.1.8.Final/netty-transport-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-resolver/4.1.8.Final/netty-resolver-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/netty/netty-codec/4.1.8.Final/netty-codec-4.1.8.Final.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-stub/1.2.0/grpc-stub-1.2.0.jar", "/home/bs140598/.m2/repository/com/google/cloud/google-cloud-core/1.0.2/google-cloud-core-1.0.2.jar", "/home/bs140598/.m2/repository/org/json/json/20160810/json-20160810.jar", "/home/bs140598/.m2/repository/com/google/cloud/google-cloud-spanner/0.20.0b-beta/google-cloud-spanner-0.20.0b-beta.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/proto-google-cloud-spanner-v1/0.1.11b/proto-google-cloud-spanner-v1-0.1.11b.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/proto-google-cloud-spanner-admin-instance-v1/0.1.11/proto-google-cloud-spanner-admin-instance-v1-0.1.11.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-cloud-spanner-v1/0.1.11b/grpc-google-cloud-spanner-v1-0.1.11b.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-cloud-spanner-admin-database-v1/0.1.11/grpc-google-cloud-spanner-admin-database-v1-0.1.11.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-cloud-spanner-admin-instance-v1/0.1.11/grpc-google-cloud-spanner-admin-instance-v1-0.1.11.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-longrunning-v1/0.1.11/grpc-google-longrunning-v1-0.1.11.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/proto-google-longrunning-v1/0.1.11/proto-google-longrunning-v1-0.1.11.jar", "/home/bs140598/.m2/repository/com/google/cloud/bigtable/bigtable-protos/1.0.0-pre3/bigtable-protos-1.0.0-pre3.jar", "/home/bs140598/.m2/repository/com/google/cloud/bigtable/bigtable-client-core/1.0.0/bigtable-client-core-1.0.0.jar", "/home/bs140598/.m2/repository/com/google/auth/google-auth-library-appengine/0.7.0/google-auth-library-appengine-0.7.0.jar", "/home/bs140598/.m2/repository/io/opencensus/opencensus-contrib-grpc-util/0.7.0/opencensus-contrib-grpc-util-0.7.0.jar", "/home/bs140598/.m2/repository/io/opencensus/opencensus-api/0.7.0/opencensus-api-0.7.0.jar", "/home/bs140598/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar", "/home/bs140598/.m2/repository/com/google/api-client/google-api-client/1.23.0/google-api-client-1.23.0.jar", "/home/bs140598/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar", "/home/bs140598/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar", "/home/bs140598/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar", "/home/bs140598/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar", "/home/bs140598/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.jar", "/home/bs140598/.m2/repository/com/google/auth/google-auth-library-credentials/0.7.1/google-auth-library-credentials-0.7.1.jar", "/home/bs140598/.m2/repository/com/google/auth/google-auth-library-oauth2-http/0.7.1/google-auth-library-oauth2-http-0.7.1.jar", "/home/bs140598/.m2/repository/com/google/protobuf/protobuf-java/3.2.0/protobuf-java-3.2.0.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/proto-google-cloud-spanner-admin-database-v1/0.1.9/proto-google-cloud-spanner-admin-database-v1-0.1.9.jar", "/home/bs140598/.m2/repository/com/google/api/grpc/proto-google-common-protos/0.1.9/proto-google-common-protos-0.1.9.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-all/1.2.0/grpc-all-1.2.0.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-okhttp/1.2.0/grpc-okhttp-1.2.0.jar", "/home/bs140598/.m2/repository/com/squareup/okhttp/okhttp/2.5.0/okhttp-2.5.0.jar", "/home/bs140598/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-protobuf-lite/1.2.0/grpc-protobuf-lite-1.2.0.jar", "/home/bs140598/.m2/repository/io/grpc/grpc-protobuf-nano/1.2.0/grpc-protobuf-nano-1.2.0.jar", "/home/bs140598/.m2/repository/com/google/protobuf/nano/protobuf-javanano/3.0.0-alpha-5/protobuf-javanano-3.0.0-alpha-5.jar", "/home/bs140598/.m2/repository/io/netty/netty-tcnative-boringssl-static/1.1.33.Fork26/netty-tcnative-boringssl-static-1.1.33.Fork26.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-runners-direct-java/2.5.0/beam-runners-direct-java-2.5.0.jar", "/home/bs140598/.m2/repository/args4j/args4j/2.33/args4j-2.33.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-runners-google-cloud-dataflow-java/2.5.0/beam-runners-google-cloud-dataflow-java-2.5.0.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-model-pipeline/2.5.0/beam-model-pipeline-2.5.0.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-runners-core-construction-java/2.5.0/beam-runners-core-construction-java-2.5.0.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-model-job-management/2.5.0/beam-model-job-management-2.5.0.jar", "/home/bs140598/.m2/repository/com/google/apis/google-api-services-dataflow/v1b3-rev221-1.23.0/google-api-services-dataflow-v1b3-rev221-1.23.0.jar", "/home/bs140598/.m2/repository/com/google/apis/google-api-services-clouddebugger/v2-rev233-1.23.0/google-api-services-clouddebugger-v2-rev233-1.23.0.jar", "/home/bs140598/.m2/repository/com/google/apis/google-api-services-storage/v1-rev124-1.23.0/google-api-services-storage-v1-rev124-1.23.0.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-io-kafka/2.5.0/beam-sdks-java-io-kafka-2.5.0.jar", "/home/bs140598/.m2/repository/org/apache/kafka/kafka-clients/1.0.0/kafka-clients-1.0.0.jar", "/home/bs140598/.m2/repository/org/lz4/lz4-java/1.4/lz4-java-1.4.jar", "/home/bs140598/.m2/repository/org/springframework/spring-expression/4.3.5.RELEASE/spring-expression-4.3.5.RELEASE.jar", "/home/bs140598/.m2/repository/org/springframework/spring-core/4.3.5.RELEASE/spring-core-4.3.5.RELEASE.jar", "/home/bs140598/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar", "/home/bs140598/.m2/repository/org/slf4j/slf4j-jdk14/1.7.25/slf4j-jdk14-1.7.25.jar", "/home/bs140598/.m2/repository/org/apache/commons/commons-dbcp2/2.0/commons-dbcp2-2.0.jar", "/home/bs140598/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar", "/home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-io-jdbc/2.4.0/beam-sdks-java-io-jdbc-2.4.0.jar", "/home/bs140598/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar", "/home/bs140598/.m2/repository/joda-time/joda-time/2.4/joda-time-2.4.jar", "/home/bs140598/.m2/repository/org/apache/commons/commons-pool2/2.4.1/commons-pool2-2.4.1.jar", "/home/bs140598/.m2/repository/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar", "/home/bs140598/.m2/repository/com/google/cloud/sql/mysql-socket-factory/1.0.8/mysql-socket-factory-1.0.8.jar", "/home/bs140598/.m2/repository/com/google/cloud/sql/jdbc-socket-factory-core/1.0.8/jdbc-socket-factory-core-1.0.8.jar", "/home/bs140598/.m2/repository/com/google/apis/google-api-services-sqladmin/v1beta4-rev25-1.22.0/google-api-services-sqladmin-v1beta4-rev25-1.22.0.jar", "/home/bs140598/.m2/repository/com/github/jnr/jnr-unixsocket/0.18/jnr-unixsocket-0.18.jar", "/home/bs140598/.m2/repository/com/github/jnr/jnr-ffi/2.1.4/jnr-ffi-2.1.4.jar", "/home/bs140598/.m2/repository/com/github/jnr/jffi/1.2.15/jffi-1.2.15.jar", "/home/bs140598/.m2/repository/com/github/jnr/jffi/1.2.15/jffi-1.2.15-native.jar", "/home/bs140598/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar", "/home/bs140598/.m2/repository/org/ow2/asm/asm-commons/5.0.3/asm-commons-5.0.3.jar", "/home/bs140598/.m2/repository/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3.jar", "/home/bs140598/.m2/repository/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.jar", "/home/bs140598/.m2/repository/org/ow2/asm/asm-util/5.0.3/asm-util-5.0.3.jar", "/home/bs140598/.m2/repository/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar", "/home/bs140598/.m2/repository/com/github/jnr/jnr-constants/0.9.8/jnr-constants-0.9.8.jar", "/home/bs140598/.m2/repository/com/github/jnr/jnr-enxio/0.16/jnr-enxio-0.16.jar", "/home/bs140598/.m2/repository/com/github/jnr/jnr-posix/3.0.35/jnr-posix-3.0.35.jar" ],
+        "templateLocation" : "gs://dark-pipe-247510/template1.json",
+        "pathValidatorClass" : "org.apache.beam.sdk.extensions.gcp.storage.GcsPathValidator",
+        "diskSizeGb" : 0
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.options.PipelineOptions",
+        "key" : "runner",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.runners.dataflow.DataflowRunner",
+        "shortValue" : "DataflowRunner"
+      }, {
+        "namespace" : "org.apache.beam.runners.dataflow.options.DataflowPipelineWorkerPoolOptions",
+        "key" : "filesToStage",
+        "type" : "STRING",
+        "value" : "[/home/bs140598/dataflow-example/target/classes, /home/bs140598/.m2/repository/com/google/cloud/dataflow/google-cloud-dataflow-java-sdk-all/2.5.0/google-cloud-dataflow-java-sdk-all-2.5.0.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-core/2.5.0/beam-sdks-java-core-2.5.0.jar, /home/bs140598/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.5/jackson-core-2.9.5.jar, /home/bs140598/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.5/jackson-annotations-2.9.5.jar, /home/bs140598/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.5/jackson-databind-2.9.5.jar, /home/bs140598/.m2/repository/org/apache/avro/avro/1.8.2/avro-1.8.2.jar, /home/bs140598/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar, /home/bs140598/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar, /home/bs140598/.m2/repository/com/thoughtworks/paranamer/paranamer/2.7/paranamer-2.7.jar, /home/bs140598/.m2/repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar, /home/bs140598/.m2/repository/org/xerial/snappy/snappy-java/1.1.4/snappy-java-1.1.4.jar, /home/bs140598/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /home/bs140598/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar, /home/bs140598/.m2/repository/junit/junit/4.12/junit-4.12.jar, /home/bs140598/.m2/repository/org/tukaani/xz/1.5/xz-1.5.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-io-google-cloud-platform/2.5.0/beam-sdks-java-io-google-cloud-platform-2.5.0.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-extensions-google-cloud-platform-core/2.5.0/beam-sdks-java-extensions-google-cloud-platform-core-2.5.0.jar, /home/bs140598/.m2/repository/com/google/cloud/bigdataoss/gcsio/1.4.5/gcsio-1.4.5.jar, /home/bs140598/.m2/repository/com/google/apis/google-api-services-cloudresourcemanager/v1-rev477-1.23.0/google-api-services-cloudresourcemanager-v1-rev477-1.23.0.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-extensions-protobuf/2.5.0/beam-sdks-java-extensions-protobuf-2.5.0.jar, /home/bs140598/.m2/repository/com/github/stephenc/findbugs/findbugs-annotations/1.3.9-1/findbugs-annotations-1.3.9-1.jar, /home/bs140598/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar, /home/bs140598/.m2/repository/io/grpc/grpc-core/1.2.0/grpc-core-1.2.0.jar, /home/bs140598/.m2/repository/com/google/errorprone/error_prone_annotations/2.0.11/error_prone_annotations-2.0.11.jar, /home/bs140598/.m2/repository/io/grpc/grpc-context/1.2.0/grpc-context-1.2.0.jar, /home/bs140598/.m2/repository/com/google/instrumentation/instrumentation-api/0.3.0/instrumentation-api-0.3.0.jar, /home/bs140598/.m2/repository/com/google/apis/google-api-services-bigquery/v2-rev374-1.23.0/google-api-services-bigquery-v2-rev374-1.23.0.jar, /home/bs140598/.m2/repository/com/google/api/gax-grpc/0.20.0/gax-grpc-0.20.0.jar, /home/bs140598/.m2/repository/io/grpc/grpc-protobuf/1.2.0/grpc-protobuf-1.2.0.jar, /home/bs140598/.m2/repository/com/google/api/api-common/1.1.0/api-common-1.1.0.jar, /home/bs140598/.m2/repository/com/google/auto/value/auto-value/1.2/auto-value-1.2.jar, /home/bs140598/.m2/repository/com/google/api/gax/1.3.1/gax-1.3.1.jar, /home/bs140598/.m2/repository/org/threeten/threetenbp/1.3.3/threetenbp-1.3.3.jar, /home/bs140598/.m2/repository/com/google/cloud/google-cloud-core-grpc/1.2.0/google-cloud-core-grpc-1.2.0.jar, /home/bs140598/.m2/repository/com/google/protobuf/protobuf-java-util/3.2.0/protobuf-java-util-3.2.0.jar, /home/bs140598/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar, /home/bs140598/.m2/repository/com/google/apis/google-api-services-pubsub/v1-rev382-1.23.0/google-api-services-pubsub-v1-rev382-1.23.0.jar, /home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-cloud-pubsub-v1/0.1.18/grpc-google-cloud-pubsub-v1-0.1.18.jar, /home/bs140598/.m2/repository/com/google/api/grpc/proto-google-cloud-pubsub-v1/0.1.18/proto-google-cloud-pubsub-v1-0.1.18.jar, /home/bs140598/.m2/repository/com/google/api/grpc/proto-google-iam-v1/0.1.18/proto-google-iam-v1-0.1.18.jar, /home/bs140598/.m2/repository/com/google/cloud/bigdataoss/util/1.4.5/util-1.4.5.jar, /home/bs140598/.m2/repository/com/google/api-client/google-api-client-java6/1.20.0/google-api-client-java6-1.20.0.jar, /home/bs140598/.m2/repository/com/google/api-client/google-api-client-jackson2/1.20.0/google-api-client-jackson2-1.20.0.jar, /home/bs140598/.m2/repository/com/google/oauth-client/google-oauth-client/1.20.0/google-oauth-client-1.20.0.jar, /home/bs140598/.m2/repository/com/google/oauth-client/google-oauth-client-java6/1.20.0/google-oauth-client-java6-1.20.0.jar, /home/bs140598/.m2/repository/com/google/cloud/datastore/datastore-v1-proto-client/1.4.0/datastore-v1-proto-client-1.4.0.jar, /home/bs140598/.m2/repository/com/google/http-client/google-http-client-protobuf/1.20.0/google-http-client-protobuf-1.20.0.jar, /home/bs140598/.m2/repository/com/google/http-client/google-http-client-jackson/1.20.0/google-http-client-jackson-1.20.0.jar, /home/bs140598/.m2/repository/com/google/cloud/datastore/datastore-v1-protos/1.3.0/datastore-v1-protos-1.3.0.jar, /home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-common-protos/0.1.0/grpc-google-common-protos-0.1.0.jar, /home/bs140598/.m2/repository/io/grpc/grpc-auth/1.2.0/grpc-auth-1.2.0.jar, /home/bs140598/.m2/repository/io/grpc/grpc-netty/1.2.0/grpc-netty-1.2.0.jar, /home/bs140598/.m2/repository/io/netty/netty-codec-http2/4.1.8.Final/netty-codec-http2-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-codec-http/4.1.8.Final/netty-codec-http-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-handler-proxy/4.1.8.Final/netty-handler-proxy-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-codec-socks/4.1.8.Final/netty-codec-socks-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-handler/4.1.8.Final/netty-handler-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-buffer/4.1.8.Final/netty-buffer-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-common/4.1.8.Final/netty-common-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-transport/4.1.8.Final/netty-transport-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-resolver/4.1.8.Final/netty-resolver-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/netty/netty-codec/4.1.8.Final/netty-codec-4.1.8.Final.jar, /home/bs140598/.m2/repository/io/grpc/grpc-stub/1.2.0/grpc-stub-1.2.0.jar, /home/bs140598/.m2/repository/com/google/cloud/google-cloud-core/1.0.2/google-cloud-core-1.0.2.jar, /home/bs140598/.m2/repository/org/json/json/20160810/json-20160810.jar, /home/bs140598/.m2/repository/com/google/cloud/google-cloud-spanner/0.20.0b-beta/google-cloud-spanner-0.20.0b-beta.jar, /home/bs140598/.m2/repository/com/google/api/grpc/proto-google-cloud-spanner-v1/0.1.11b/proto-google-cloud-spanner-v1-0.1.11b.jar, /home/bs140598/.m2/repository/com/google/api/grpc/proto-google-cloud-spanner-admin-instance-v1/0.1.11/proto-google-cloud-spanner-admin-instance-v1-0.1.11.jar, /home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-cloud-spanner-v1/0.1.11b/grpc-google-cloud-spanner-v1-0.1.11b.jar, /home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-cloud-spanner-admin-database-v1/0.1.11/grpc-google-cloud-spanner-admin-database-v1-0.1.11.jar, /home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-cloud-spanner-admin-instance-v1/0.1.11/grpc-google-cloud-spanner-admin-instance-v1-0.1.11.jar, /home/bs140598/.m2/repository/com/google/api/grpc/grpc-google-longrunning-v1/0.1.11/grpc-google-longrunning-v1-0.1.11.jar, /home/bs140598/.m2/repository/com/google/api/grpc/proto-google-longrunning-v1/0.1.11/proto-google-longrunning-v1-0.1.11.jar, /home/bs140598/.m2/repository/com/google/cloud/bigtable/bigtable-protos/1.0.0-pre3/bigtable-protos-1.0.0-pre3.jar, /home/bs140598/.m2/repository/com/google/cloud/bigtable/bigtable-client-core/1.0.0/bigtable-client-core-1.0.0.jar, /home/bs140598/.m2/repository/com/google/auth/google-auth-library-appengine/0.7.0/google-auth-library-appengine-0.7.0.jar, /home/bs140598/.m2/repository/io/opencensus/opencensus-contrib-grpc-util/0.7.0/opencensus-contrib-grpc-util-0.7.0.jar, /home/bs140598/.m2/repository/io/opencensus/opencensus-api/0.7.0/opencensus-api-0.7.0.jar, /home/bs140598/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar, /home/bs140598/.m2/repository/com/google/api-client/google-api-client/1.23.0/google-api-client-1.23.0.jar, /home/bs140598/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar, /home/bs140598/.m2/repository/org/apache/httpcomponents/httpclient/4.0.1/httpclient-4.0.1.jar, /home/bs140598/.m2/repository/org/apache/httpcomponents/httpcore/4.0.1/httpcore-4.0.1.jar, /home/bs140598/.m2/repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar, /home/bs140598/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.jar, /home/bs140598/.m2/repository/com/google/auth/google-auth-library-credentials/0.7.1/google-auth-library-credentials-0.7.1.jar, /home/bs140598/.m2/repository/com/google/auth/google-auth-library-oauth2-http/0.7.1/google-auth-library-oauth2-http-0.7.1.jar, /home/bs140598/.m2/repository/com/google/protobuf/protobuf-java/3.2.0/protobuf-java-3.2.0.jar, /home/bs140598/.m2/repository/com/google/api/grpc/proto-google-cloud-spanner-admin-database-v1/0.1.9/proto-google-cloud-spanner-admin-database-v1-0.1.9.jar, /home/bs140598/.m2/repository/com/google/api/grpc/proto-google-common-protos/0.1.9/proto-google-common-protos-0.1.9.jar, /home/bs140598/.m2/repository/io/grpc/grpc-all/1.2.0/grpc-all-1.2.0.jar, /home/bs140598/.m2/repository/io/grpc/grpc-okhttp/1.2.0/grpc-okhttp-1.2.0.jar, /home/bs140598/.m2/repository/com/squareup/okhttp/okhttp/2.5.0/okhttp-2.5.0.jar, /home/bs140598/.m2/repository/com/squareup/okio/okio/1.6.0/okio-1.6.0.jar, /home/bs140598/.m2/repository/io/grpc/grpc-protobuf-lite/1.2.0/grpc-protobuf-lite-1.2.0.jar, /home/bs140598/.m2/repository/io/grpc/grpc-protobuf-nano/1.2.0/grpc-protobuf-nano-1.2.0.jar, /home/bs140598/.m2/repository/com/google/protobuf/nano/protobuf-javanano/3.0.0-alpha-5/protobuf-javanano-3.0.0-alpha-5.jar, /home/bs140598/.m2/repository/io/netty/netty-tcnative-boringssl-static/1.1.33.Fork26/netty-tcnative-boringssl-static-1.1.33.Fork26.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-runners-direct-java/2.5.0/beam-runners-direct-java-2.5.0.jar, /home/bs140598/.m2/repository/args4j/args4j/2.33/args4j-2.33.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-runners-google-cloud-dataflow-java/2.5.0/beam-runners-google-cloud-dataflow-java-2.5.0.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-model-pipeline/2.5.0/beam-model-pipeline-2.5.0.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-runners-core-construction-java/2.5.0/beam-runners-core-construction-java-2.5.0.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-model-job-management/2.5.0/beam-model-job-management-2.5.0.jar, /home/bs140598/.m2/repository/com/google/apis/google-api-services-dataflow/v1b3-rev221-1.23.0/google-api-services-dataflow-v1b3-rev221-1.23.0.jar, /home/bs140598/.m2/repository/com/google/apis/google-api-services-clouddebugger/v2-rev233-1.23.0/google-api-services-clouddebugger-v2-rev233-1.23.0.jar, /home/bs140598/.m2/repository/com/google/apis/google-api-services-storage/v1-rev124-1.23.0/google-api-services-storage-v1-rev124-1.23.0.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-io-kafka/2.5.0/beam-sdks-java-io-kafka-2.5.0.jar, /home/bs140598/.m2/repository/org/apache/kafka/kafka-clients/1.0.0/kafka-clients-1.0.0.jar, /home/bs140598/.m2/repository/org/lz4/lz4-java/1.4/lz4-java-1.4.jar, /home/bs140598/.m2/repository/org/springframework/spring-expression/4.3.5.RELEASE/spring-expression-4.3.5.RELEASE.jar, /home/bs140598/.m2/repository/org/springframework/spring-core/4.3.5.RELEASE/spring-core-4.3.5.RELEASE.jar, /home/bs140598/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar, /home/bs140598/.m2/repository/org/slf4j/slf4j-jdk14/1.7.25/slf4j-jdk14-1.7.25.jar, /home/bs140598/.m2/repository/org/apache/commons/commons-dbcp2/2.0/commons-dbcp2-2.0.jar, /home/bs140598/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar, /home/bs140598/.m2/repository/org/apache/beam/beam-sdks-java-io-jdbc/2.4.0/beam-sdks-java-io-jdbc-2.4.0.jar, /home/bs140598/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar, /home/bs140598/.m2/repository/joda-time/joda-time/2.4/joda-time-2.4.jar, /home/bs140598/.m2/repository/org/apache/commons/commons-pool2/2.4.1/commons-pool2-2.4.1.jar, /home/bs140598/.m2/repository/mysql/mysql-connector-java/5.1.6/mysql-connector-java-5.1.6.jar, /home/bs140598/.m2/repository/com/google/cloud/sql/mysql-socket-factory/1.0.8/mysql-socket-factory-1.0.8.jar, /home/bs140598/.m2/repository/com/google/cloud/sql/jdbc-socket-factory-core/1.0.8/jdbc-socket-factory-core-1.0.8.jar, /home/bs140598/.m2/repository/com/google/apis/google-api-services-sqladmin/v1beta4-rev25-1.22.0/google-api-services-sqladmin-v1beta4-rev25-1.22.0.jar, /home/bs140598/.m2/repository/com/github/jnr/jnr-unixsocket/0.18/jnr-unixsocket-0.18.jar, /home/bs140598/.m2/repository/com/github/jnr/jnr-ffi/2.1.4/jnr-ffi-2.1.4.jar, /home/bs140598/.m2/repository/com/github/jnr/jffi/1.2.15/jffi-1.2.15.jar, /home/bs140598/.m2/repository/com/github/jnr/jffi/1.2.15/jffi-1.2.15-native.jar, /home/bs140598/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar, /home/bs140598/.m2/repository/org/ow2/asm/asm-commons/5.0.3/asm-commons-5.0.3.jar, /home/bs140598/.m2/repository/org/ow2/asm/asm-analysis/5.0.3/asm-analysis-5.0.3.jar, /home/bs140598/.m2/repository/org/ow2/asm/asm-tree/5.0.3/asm-tree-5.0.3.jar, /home/bs140598/.m2/repository/org/ow2/asm/asm-util/5.0.3/asm-util-5.0.3.jar, /home/bs140598/.m2/repository/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar, /home/bs140598/.m2/repository/com/github/jnr/jnr-constants/0.9.8/jnr-constants-0.9.8.jar, /home/bs140598/.m2/repository/com/github/jnr/jnr-enxio/0.16/jnr-enxio-0.16.jar, /home/bs140598/.m2/repository/com/github/jnr/jnr-posix/3.0.35/jnr-posix-3.0.35.jar]"
+      }, {
+        "namespace" : "org.apache.beam.sdk.options.PipelineOptions",
+        "key" : "userAgent",
+        "type" : "STRING",
+        "value" : "Google_Cloud_Dataflow_SDK_for_Java/2.5.0"
+      }, {
+        "namespace" : "org.apache.beam.runners.dataflow.options.DataflowPipelineOptions",
+        "key" : "templateLocation",
+        "type" : "STRING",
+        "value" : "gs://dark-pipe-247510/template1.json"
+      }, {
+        "namespace" : "org.apache.beam.runners.dataflow.options.DataflowPipelineOptions",
+        "key" : "project",
+        "type" : "STRING",
+        "value" : "dark-pipe-247510"
+      }, {
+        "namespace" : "org.apache.beam.sdk.options.ApplicationNameOptions",
+        "key" : "appName",
+        "type" : "STRING",
+        "value" : "SqlDataflow"
+      }, {
+        "namespace" : "org.apache.beam.sdk.options.PipelineOptions",
+        "key" : "jobName",
+        "type" : "STRING",
+        "value" : "sqldataflow-bs140598-0809070601-627df410"
+      }, {
+        "namespace" : "org.apache.beam.sdk.options.PipelineOptions",
+        "key" : "tempLocation",
+        "type" : "STRING",
+        "value" : "gs://datasets14/temp/"
+      }, {
+        "namespace" : "org.apache.beam.runners.dataflow.options.DataflowPipelineOptions",
+        "key" : "stagingLocation",
+        "type" : "STRING",
+        "value" : "gs://datasets14/staging/"
+      }, {
+        "namespace" : "org.apache.beam.runners.dataflow.options.DataflowPipelineOptions",
+        "key" : "pipelineUrl",
+        "type" : "STRING",
+        "value" : "gs://datasets14/staging/pipeline-3yGAxEe73-yv4PzBWVa3JA.pb"
+      } ]
+    },
+    "tempStoragePrefix" : "storage.googleapis.com/datasets14/temp/",
+    "userAgent" : {
+      "os.arch" : "amd64",
+      "name" : "Google Cloud Dataflow SDK for Java",
+      "java.version" : "1.8.0_222",
+      "fnapi.environment.major.version" : "1",
+      "build.date" : "2018-06-26 20:22",
+      "os.version" : "4.14.111+",
+      "os.name" : "Linux",
+      "java.vendor" : "Oracle Corporation",
+      "version" : "2.5.0",
+      "container.version" : "beam-2.5.0",
+      "legacy.environment.major.version" : "6"
+    },
+    "version" : {
+      "major" : "6",
+      "job_type" : "JAVA_BATCH_AUTOSCALING"
+    },
+    "workerPools" : [ {
+      "autoscalingSettings" : {
+        "maxNumWorkers" : 0
+      },
+      "numWorkers" : 0,
+      "packages" : [ {
+        "location" : "gs://datasets14/staging/classes-p9BpdgMfGkeCUGrnmGkOwg.jar",
+        "name" : "classes-p9BpdgMfGkeCUGrnmGkOwg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-cloud-dataflow-java-sdk-all-2.5.0-w5o2boY5Z7xdDnGe-aBIhg.jar",
+        "name" : "google-cloud-dataflow-java-sdk-all-2.5.0-w5o2boY5Z7xdDnGe-aBIhg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-sdks-java-core-2.5.0-Zp1AQRDJwWDqLFTCGFa2Bw.jar",
+        "name" : "beam-sdks-java-core-2.5.0-Zp1AQRDJwWDqLFTCGFa2Bw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jackson-core-2.9.5-7FnyT3-Nms9TMBxWJyKt8g.jar",
+        "name" : "jackson-core-2.9.5-7FnyT3-Nms9TMBxWJyKt8g.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jackson-annotations-2.9.5-k_-ZCC-Jvro917WUpHjfEA.jar",
+        "name" : "jackson-annotations-2.9.5-k_-ZCC-Jvro917WUpHjfEA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jackson-databind-2.9.5-NLN6_7909dGZvhBiLdyDzQ.jar",
+        "name" : "jackson-databind-2.9.5-NLN6_7909dGZvhBiLdyDzQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/avro-1.8.2-EDleWlceGh9hE0EfJ20v6g.jar",
+        "name" : "avro-1.8.2-EDleWlceGh9hE0EfJ20v6g.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jackson-core-asl-1.9.13-MZxJpDBOP6n-PNjc_ACdNw.jar",
+        "name" : "jackson-core-asl-1.9.13-MZxJpDBOP6n-PNjc_ACdNw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jackson-mapper-asl-1.9.13-F1D5wzk1L8S3KNYbVxcWEw.jar",
+        "name" : "jackson-mapper-asl-1.9.13-F1D5wzk1L8S3KNYbVxcWEw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/paranamer-2.7-VweilzYySf_-OOgYnNb5yw.jar",
+        "name" : "paranamer-2.7-VweilzYySf_-OOgYnNb5yw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/commons-compress-1.8.1-2GLjD_a114JkZ33NZQeruA.jar",
+        "name" : "commons-compress-1.8.1-2GLjD_a114JkZ33NZQeruA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/snappy-java-1.1.4-SFNwbMuGq13aaoKVzeS1Tw.jar",
+        "name" : "snappy-java-1.1.4-SFNwbMuGq13aaoKVzeS1Tw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/hamcrest-core-1.3-Y5M2O0fdy7qCMhEQw-B1GQ.jar",
+        "name" : "hamcrest-core-1.3-Y5M2O0fdy7qCMhEQw-B1GQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/hamcrest-library-1.3-EQrS6oT3AxoXmGSLazGOeQ.jar",
+        "name" : "hamcrest-library-1.3-EQrS6oT3AxoXmGSLazGOeQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/junit-4.12-WzjEDJf70K3uKfkeYEBVhA.jar",
+        "name" : "junit-4.12-WzjEDJf70K3uKfkeYEBVhA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/xz-1.5-UQUOWVswjErsisMU9m4YvA.jar",
+        "name" : "xz-1.5-UQUOWVswjErsisMU9m4YvA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-sdks-java-io-google-cloud-platform-2.5.0-MHPt5kXtCXRsi8Zg3hJA5A.jar",
+        "name" : "beam-sdks-java-io-google-cloud-platform-2.5.0-MHPt5kXtCXRsi8Zg3hJA5A.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-sdks-java-extensions-google-cloud-platform-core-2.5.0-nqQTLZRNCIFcEgR84rKQYg.jar",
+        "name" : "beam-sdks-java-extensions-google-cloud-platform-core-2.5.0-nqQTLZRNCIFcEgR84rKQYg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/gcsio-1.4.5-wDxmp2xB1MC0SyUVljocbw.jar",
+        "name" : "gcsio-1.4.5-wDxmp2xB1MC0SyUVljocbw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-services-cloudresourcemanager-v1-rev477-1.23.0-mmum7oo7Z4XJpyXaaFXIVQ.jar",
+        "name" : "google-api-services-cloudresourcemanager-v1-rev477-1.23.0-mmum7oo7Z4XJpyXaaFXIVQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-sdks-java-extensions-protobuf-2.5.0-ZiW20WNKGr8O90VvDgCZpQ.jar",
+        "name" : "beam-sdks-java-extensions-protobuf-2.5.0-ZiW20WNKGr8O90VvDgCZpQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/findbugs-annotations-1.3.9-1-cP2lIC652c5PJQ8sK6cRUg.jar",
+        "name" : "findbugs-annotations-1.3.9-1-cP2lIC652c5PJQ8sK6cRUg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/guava-20.0-8yqKJSRiDb7Mn2v2ogwpPw.jar",
+        "name" : "guava-20.0-8yqKJSRiDb7Mn2v2ogwpPw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-core-1.2.0-DQhKokGWrINw5yLhem0nTw.jar",
+        "name" : "grpc-core-1.2.0-DQhKokGWrINw5yLhem0nTw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/error_prone_annotations-2.0.11-8W-pcVWex0lx_-z-kVw0fg.jar",
+        "name" : "error_prone_annotations-2.0.11-8W-pcVWex0lx_-z-kVw0fg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-context-1.2.0-DJBqocwEkl2k3bo8M-MHxA.jar",
+        "name" : "grpc-context-1.2.0-DJBqocwEkl2k3bo8M-MHxA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/instrumentation-api-0.3.0-f7kC0KHMjPPJqHTIKtta5Q.jar",
+        "name" : "instrumentation-api-0.3.0-f7kC0KHMjPPJqHTIKtta5Q.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-services-bigquery-v2-rev374-1.23.0-lsrzAAYYOHhgGsTXaJJ2fw.jar",
+        "name" : "google-api-services-bigquery-v2-rev374-1.23.0-lsrzAAYYOHhgGsTXaJJ2fw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/gax-grpc-0.20.0-ZH5R9ZHWvLLcWy5At0WYiA.jar",
+        "name" : "gax-grpc-0.20.0-ZH5R9ZHWvLLcWy5At0WYiA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-protobuf-1.2.0-qvtJD8BUzdeawjnjaAvsww.jar",
+        "name" : "grpc-protobuf-1.2.0-qvtJD8BUzdeawjnjaAvsww.jar"
+      }, {
+        "location" : "gs://datasets14/staging/api-common-1.1.0-o52HSqH7T1zJmdYm2KEmOg.jar",
+        "name" : "api-common-1.1.0-o52HSqH7T1zJmdYm2KEmOg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/auto-value-1.2-CzUfyVSrjxfJPC44zFCXog.jar",
+        "name" : "auto-value-1.2-CzUfyVSrjxfJPC44zFCXog.jar"
+      }, {
+        "location" : "gs://datasets14/staging/gax-1.3.1-DFLKysQqbR1vZay5E6mEWg.jar",
+        "name" : "gax-1.3.1-DFLKysQqbR1vZay5E6mEWg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/threetenbp-1.3.3-bEXFSgaAYiXSdUtR-98IjQ.jar",
+        "name" : "threetenbp-1.3.3-bEXFSgaAYiXSdUtR-98IjQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-cloud-core-grpc-1.2.0-Ie1lIHHKEwLSZENg1nWP5g.jar",
+        "name" : "google-cloud-core-grpc-1.2.0-Ie1lIHHKEwLSZENg1nWP5g.jar"
+      }, {
+        "location" : "gs://datasets14/staging/protobuf-java-util-3.2.0-ttE20_YC3htFHeITLYTxVg.jar",
+        "name" : "protobuf-java-util-3.2.0-ttE20_YC3htFHeITLYTxVg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/gson-2.7-UTSiNQ9YiQ_7nbC0AEcZXQ.jar",
+        "name" : "gson-2.7-UTSiNQ9YiQ_7nbC0AEcZXQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-services-pubsub-v1-rev382-1.23.0-zgbhHS-zylv3RLbgD_YoVA.jar",
+        "name" : "google-api-services-pubsub-v1-rev382-1.23.0-zgbhHS-zylv3RLbgD_YoVA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-google-cloud-pubsub-v1-0.1.18-ZtT98iMMpQs6ug7W8GZhiA.jar",
+        "name" : "grpc-google-cloud-pubsub-v1-0.1.18-ZtT98iMMpQs6ug7W8GZhiA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/proto-google-cloud-pubsub-v1-0.1.18-nNjVg3bM9bzk3TiD2yYlaA.jar",
+        "name" : "proto-google-cloud-pubsub-v1-0.1.18-nNjVg3bM9bzk3TiD2yYlaA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/proto-google-iam-v1-0.1.18-sT-0pRDS20cuTf8mHEd4CA.jar",
+        "name" : "proto-google-iam-v1-0.1.18-sT-0pRDS20cuTf8mHEd4CA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/util-1.4.5-kK-TA3SeeyuNcdfvxAqaEw.jar",
+        "name" : "util-1.4.5-kK-TA3SeeyuNcdfvxAqaEw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-client-java6-1.20.0-2K96jNpulhL4z7pRTZxguA.jar",
+        "name" : "google-api-client-java6-1.20.0-2K96jNpulhL4z7pRTZxguA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-client-jackson2-1.20.0-Bb8qFi4RQ-h7hdKBHxkPOQ.jar",
+        "name" : "google-api-client-jackson2-1.20.0-Bb8qFi4RQ-h7hdKBHxkPOQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-oauth-client-1.20.0-kBCXuffMviMORH22dxHYDA.jar",
+        "name" : "google-oauth-client-1.20.0-kBCXuffMviMORH22dxHYDA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-oauth-client-java6-1.20.0-zNXtuF7bjUOt0k9ieVV5Kg.jar",
+        "name" : "google-oauth-client-java6-1.20.0-zNXtuF7bjUOt0k9ieVV5Kg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/datastore-v1-proto-client-1.4.0-6sChHEPEy_RxpH7RuNMsqA.jar",
+        "name" : "datastore-v1-proto-client-1.4.0-6sChHEPEy_RxpH7RuNMsqA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-http-client-protobuf-1.20.0-walfZh2_TWtY2f9oxMcF0A.jar",
+        "name" : "google-http-client-protobuf-1.20.0-walfZh2_TWtY2f9oxMcF0A.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-http-client-jackson-1.20.0-IMgfjHQPFQkC5I6W0DIOXg.jar",
+        "name" : "google-http-client-jackson-1.20.0-IMgfjHQPFQkC5I6W0DIOXg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/datastore-v1-protos-1.3.0-DLV_ozCgKng95uCQ8DcH4w.jar",
+        "name" : "datastore-v1-protos-1.3.0-DLV_ozCgKng95uCQ8DcH4w.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-google-common-protos-0.1.0-gTuqDodJyiReIyFOJhwH4g.jar",
+        "name" : "grpc-google-common-protos-0.1.0-gTuqDodJyiReIyFOJhwH4g.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-auth-1.2.0-KcUyxUn3zTc03-akTU3Unw.jar",
+        "name" : "grpc-auth-1.2.0-KcUyxUn3zTc03-akTU3Unw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-netty-1.2.0-3qpprxqES0i-O4r6k9v3ag.jar",
+        "name" : "grpc-netty-1.2.0-3qpprxqES0i-O4r6k9v3ag.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-codec-http2-4.1.8.Final-AfKCzOA2qmDlw0HBTbPmDg.jar",
+        "name" : "netty-codec-http2-4.1.8.Final-AfKCzOA2qmDlw0HBTbPmDg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-codec-http-4.1.8.Final-uBsfxiZeL3IeVQNS0QTHUw.jar",
+        "name" : "netty-codec-http-4.1.8.Final-uBsfxiZeL3IeVQNS0QTHUw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-handler-proxy-4.1.8.Final-Zey48Fj4mlWtgpwIc7Osgg.jar",
+        "name" : "netty-handler-proxy-4.1.8.Final-Zey48Fj4mlWtgpwIc7Osgg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-codec-socks-4.1.8.Final-dfbCpCpgkEl1iwscd6OVeQ.jar",
+        "name" : "netty-codec-socks-4.1.8.Final-dfbCpCpgkEl1iwscd6OVeQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-handler-4.1.8.Final-gZi7R-DTlcEw9CmPWOQBOw.jar",
+        "name" : "netty-handler-4.1.8.Final-gZi7R-DTlcEw9CmPWOQBOw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-buffer-4.1.8.Final-iwny8IFMu0G1ln10Yx5VrA.jar",
+        "name" : "netty-buffer-4.1.8.Final-iwny8IFMu0G1ln10Yx5VrA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-common-4.1.8.Final-lafOW8vGsI6SRwZSmXNClg.jar",
+        "name" : "netty-common-4.1.8.Final-lafOW8vGsI6SRwZSmXNClg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-transport-4.1.8.Final-PXWj5ZmqlznhCnqhkcOwDA.jar",
+        "name" : "netty-transport-4.1.8.Final-PXWj5ZmqlznhCnqhkcOwDA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-resolver-4.1.8.Final-ZBELwscrxRZgRR5DKH9siA.jar",
+        "name" : "netty-resolver-4.1.8.Final-ZBELwscrxRZgRR5DKH9siA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-codec-4.1.8.Final-Og5DJ4MB-fn1oSzjKqVU_w.jar",
+        "name" : "netty-codec-4.1.8.Final-Og5DJ4MB-fn1oSzjKqVU_w.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-stub-1.2.0-pLUMsPLEGnU2lgSBLQTSqw.jar",
+        "name" : "grpc-stub-1.2.0-pLUMsPLEGnU2lgSBLQTSqw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-cloud-core-1.0.2-VCjKt98fkWhaiM-i04EZ2Q.jar",
+        "name" : "google-cloud-core-1.0.2-VCjKt98fkWhaiM-i04EZ2Q.jar"
+      }, {
+        "location" : "gs://datasets14/staging/json-20160810-L3-Jnwdm5lAXdEpMT8FNRg.jar",
+        "name" : "json-20160810-L3-Jnwdm5lAXdEpMT8FNRg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-cloud-spanner-0.20.0b-beta-DQUP3cnKr39DupsU3PtmUw.jar",
+        "name" : "google-cloud-spanner-0.20.0b-beta-DQUP3cnKr39DupsU3PtmUw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/proto-google-cloud-spanner-v1-0.1.11b-HDU1KNAtYAOui3WsCRrHhQ.jar",
+        "name" : "proto-google-cloud-spanner-v1-0.1.11b-HDU1KNAtYAOui3WsCRrHhQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/proto-google-cloud-spanner-admin-instance-v1-0.1.11-XJS_u8898MWkoK2CW-gz_A.jar",
+        "name" : "proto-google-cloud-spanner-admin-instance-v1-0.1.11-XJS_u8898MWkoK2CW-gz_A.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-google-cloud-spanner-v1-0.1.11b-17yEVYs16y4nMtd7Y1DuyQ.jar",
+        "name" : "grpc-google-cloud-spanner-v1-0.1.11b-17yEVYs16y4nMtd7Y1DuyQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-google-cloud-spanner-admin-database-v1-0.1.11-ruGXrjOcLaVc5MrEE54OSQ.jar",
+        "name" : "grpc-google-cloud-spanner-admin-database-v1-0.1.11-ruGXrjOcLaVc5MrEE54OSQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-google-cloud-spanner-admin-instance-v1-0.1.11-km22axbAhbEpIrtqgEDEgw.jar",
+        "name" : "grpc-google-cloud-spanner-admin-instance-v1-0.1.11-km22axbAhbEpIrtqgEDEgw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-google-longrunning-v1-0.1.11-2eErPywOHVJFOpWZ_3-Fzg.jar",
+        "name" : "grpc-google-longrunning-v1-0.1.11-2eErPywOHVJFOpWZ_3-Fzg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/proto-google-longrunning-v1-0.1.11-nRLeZRqClj9lxz1breGqVw.jar",
+        "name" : "proto-google-longrunning-v1-0.1.11-nRLeZRqClj9lxz1breGqVw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/bigtable-protos-1.0.0-pre3-nxM7p3Mvl4h6zGP4J52PAg.jar",
+        "name" : "bigtable-protos-1.0.0-pre3-nxM7p3Mvl4h6zGP4J52PAg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/bigtable-client-core-1.0.0-krEvsGXi2mdIqxm6h_-QdA.jar",
+        "name" : "bigtable-client-core-1.0.0-krEvsGXi2mdIqxm6h_-QdA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-auth-library-appengine-0.7.0-MQ-aJUFVug7_oovup8ckog.jar",
+        "name" : "google-auth-library-appengine-0.7.0-MQ-aJUFVug7_oovup8ckog.jar"
+      }, {
+        "location" : "gs://datasets14/staging/opencensus-contrib-grpc-util-0.7.0-DnT2ijJ4CgdaxdGpq5iiIA.jar",
+        "name" : "opencensus-contrib-grpc-util-0.7.0-DnT2ijJ4CgdaxdGpq5iiIA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/opencensus-api-0.7.0-9cqHt2cnRmDz4Nx0HIAOmQ.jar",
+        "name" : "opencensus-api-0.7.0-9cqHt2cnRmDz4Nx0HIAOmQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/metrics-core-3.1.2-uLLedSRzIqDAN0IPVwjlkg.jar",
+        "name" : "metrics-core-3.1.2-uLLedSRzIqDAN0IPVwjlkg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-client-1.23.0-m0lzW6mIDChbflWBDQEM8w.jar",
+        "name" : "google-api-client-1.23.0-m0lzW6mIDChbflWBDQEM8w.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-http-client-1.23.0-9kgPWQ4Dqb_26uz44EPCGA.jar",
+        "name" : "google-http-client-1.23.0-9kgPWQ4Dqb_26uz44EPCGA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/httpclient-4.0.1-nKmHdIYBAcBsqQEO_WIkoQ.jar",
+        "name" : "httpclient-4.0.1-nKmHdIYBAcBsqQEO_WIkoQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/httpcore-4.0.1-bBlj_YrAxAwATJ6JLg13Aw.jar",
+        "name" : "httpcore-4.0.1-bBlj_YrAxAwATJ6JLg13Aw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/commons-codec-1.3-jhScEFN0HANzalLfg5dNzA.jar",
+        "name" : "commons-codec-1.3-jhScEFN0HANzalLfg5dNzA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-http-client-jackson2-1.23.0-RacEz47_Cnrxgukt4aeWUw.jar",
+        "name" : "google-http-client-jackson2-1.23.0-RacEz47_Cnrxgukt4aeWUw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-auth-library-credentials-0.7.1-FdKkCecS-CK7MfPTUWOIXA.jar",
+        "name" : "google-auth-library-credentials-0.7.1-FdKkCecS-CK7MfPTUWOIXA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-auth-library-oauth2-http-0.7.1-CrzkxinueE08Y78MDoN3yw.jar",
+        "name" : "google-auth-library-oauth2-http-0.7.1-CrzkxinueE08Y78MDoN3yw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/protobuf-java-3.2.0-fh30Gescj5k_IhxJOGxriw.jar",
+        "name" : "protobuf-java-3.2.0-fh30Gescj5k_IhxJOGxriw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/proto-google-cloud-spanner-admin-database-v1-0.1.9-in4PpDO8t3_HBEj8u1L8Uw.jar",
+        "name" : "proto-google-cloud-spanner-admin-database-v1-0.1.9-in4PpDO8t3_HBEj8u1L8Uw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/proto-google-common-protos-0.1.9-_83eXiiP6E2LZYIU5feerg.jar",
+        "name" : "proto-google-common-protos-0.1.9-_83eXiiP6E2LZYIU5feerg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-all-1.2.0-9CkSuhQi_kYK_N3UK5gtPA.jar",
+        "name" : "grpc-all-1.2.0-9CkSuhQi_kYK_N3UK5gtPA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-okhttp-1.2.0-0gQkWLEWdH4-sb6jx4lZ9w.jar",
+        "name" : "grpc-okhttp-1.2.0-0gQkWLEWdH4-sb6jx4lZ9w.jar"
+      }, {
+        "location" : "gs://datasets14/staging/okhttp-2.5.0-64v0X4G_nxfR_PsuymOqpg.jar",
+        "name" : "okhttp-2.5.0-64v0X4G_nxfR_PsuymOqpg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/okio-1.6.0-Fk0cKMMjz24qkX1gN0xXGA.jar",
+        "name" : "okio-1.6.0-Fk0cKMMjz24qkX1gN0xXGA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-protobuf-lite-1.2.0-78fQzJ7vMcmd0WkOP4mKzA.jar",
+        "name" : "grpc-protobuf-lite-1.2.0-78fQzJ7vMcmd0WkOP4mKzA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/grpc-protobuf-nano-1.2.0-_Q87bBdV6P9enz9PnkbLQg.jar",
+        "name" : "grpc-protobuf-nano-1.2.0-_Q87bBdV6P9enz9PnkbLQg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/protobuf-javanano-3.0.0-alpha-5-SsS7fZe7brffHbAGUgRrnw.jar",
+        "name" : "protobuf-javanano-3.0.0-alpha-5-SsS7fZe7brffHbAGUgRrnw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/netty-tcnative-boringssl-static-1.1.33.Fork26-29XB0C44MyezMyoCB5cCbw.jar",
+        "name" : "netty-tcnative-boringssl-static-1.1.33.Fork26-29XB0C44MyezMyoCB5cCbw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-runners-direct-java-2.5.0-2PFSc4Smdk9BChKgsgb8sg.jar",
+        "name" : "beam-runners-direct-java-2.5.0-2PFSc4Smdk9BChKgsgb8sg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/args4j-2.33-Cm1RX3axXSnjzVKd6TGXOQ.jar",
+        "name" : "args4j-2.33-Cm1RX3axXSnjzVKd6TGXOQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-runners-google-cloud-dataflow-java-2.5.0-z5F-DjUbrvVfK-mNkAXJHQ.jar",
+        "name" : "beam-runners-google-cloud-dataflow-java-2.5.0-z5F-DjUbrvVfK-mNkAXJHQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-model-pipeline-2.5.0-eyYEeMYMPIH3CAtLuSPIxg.jar",
+        "name" : "beam-model-pipeline-2.5.0-eyYEeMYMPIH3CAtLuSPIxg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-runners-core-construction-java-2.5.0-X-5EQmLdrq8HWo3QwPdUfQ.jar",
+        "name" : "beam-runners-core-construction-java-2.5.0-X-5EQmLdrq8HWo3QwPdUfQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-model-job-management-2.5.0--QRAJMQHj-OQ-VPVGly3_Q.jar",
+        "name" : "beam-model-job-management-2.5.0--QRAJMQHj-OQ-VPVGly3_Q.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-services-dataflow-v1b3-rev221-1.23.0-pm13bwkpYytjv_KdqYRaLQ.jar",
+        "name" : "google-api-services-dataflow-v1b3-rev221-1.23.0-pm13bwkpYytjv_KdqYRaLQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-services-clouddebugger-v2-rev233-1.23.0-_S7uen40ZxOvpaQsf3uG1w.jar",
+        "name" : "google-api-services-clouddebugger-v2-rev233-1.23.0-_S7uen40ZxOvpaQsf3uG1w.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-services-storage-v1-rev124-1.23.0-SyJfpRmPKPnZ-Qty3O6yeQ.jar",
+        "name" : "google-api-services-storage-v1-rev124-1.23.0-SyJfpRmPKPnZ-Qty3O6yeQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-sdks-java-io-kafka-2.5.0-QbP2b_F5BSIvgB1upDk1jg.jar",
+        "name" : "beam-sdks-java-io-kafka-2.5.0-QbP2b_F5BSIvgB1upDk1jg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/kafka-clients-1.0.0-5wCjqW4UhrqeOraZI7hQbw.jar",
+        "name" : "kafka-clients-1.0.0-5wCjqW4UhrqeOraZI7hQbw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/lz4-java-1.4-ZC_EwBoaT4xAvwpaHSec8A.jar",
+        "name" : "lz4-java-1.4-ZC_EwBoaT4xAvwpaHSec8A.jar"
+      }, {
+        "location" : "gs://datasets14/staging/spring-expression-4.3.5.RELEASE-7bVYpA00SnKbKLZhf2CFXA.jar",
+        "name" : "spring-expression-4.3.5.RELEASE-7bVYpA00SnKbKLZhf2CFXA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/spring-core-4.3.5.RELEASE-MuFLFWBXEV76DEux_hPu9Q.jar",
+        "name" : "spring-core-4.3.5.RELEASE-MuFLFWBXEV76DEux_hPu9Q.jar"
+      }, {
+        "location" : "gs://datasets14/staging/slf4j-api-1.7.25-yq_jdq-3CG3L7nn3gDlMow.jar",
+        "name" : "slf4j-api-1.7.25-yq_jdq-3CG3L7nn3gDlMow.jar"
+      }, {
+        "location" : "gs://datasets14/staging/slf4j-jdk14-1.7.25-lEPyQGtDduRgOFY4C9MlVA.jar",
+        "name" : "slf4j-jdk14-1.7.25-lEPyQGtDduRgOFY4C9MlVA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/commons-dbcp2-2.0-D-v1vpWQGXyGW86lg2rWRQ.jar",
+        "name" : "commons-dbcp2-2.0-D-v1vpWQGXyGW86lg2rWRQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/commons-logging-1.1.3-kutaq8G0cofeU9RcCGpDXA.jar",
+        "name" : "commons-logging-1.1.3-kutaq8G0cofeU9RcCGpDXA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/beam-sdks-java-io-jdbc-2.4.0-n4DoXbzuxB75WTbCQ2S5_Q.jar",
+        "name" : "beam-sdks-java-io-jdbc-2.4.0-n4DoXbzuxB75WTbCQ2S5_Q.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jsr305-3.0.1-xlMr6z98xUqNc9JdVgK55A.jar",
+        "name" : "jsr305-3.0.1-xlMr6z98xUqNc9JdVgK55A.jar"
+      }, {
+        "location" : "gs://datasets14/staging/joda-time-2.4-EjHD4J3mql1rbZmCwCJOIA.jar",
+        "name" : "joda-time-2.4-EjHD4J3mql1rbZmCwCJOIA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/commons-pool2-2.4.1-KUy_p24UmY7csuLbWRRKMg.jar",
+        "name" : "commons-pool2-2.4.1-KUy_p24UmY7csuLbWRRKMg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/mysql-connector-java-5.1.6-QL4wXukftqejhe6yYMfAig.jar",
+        "name" : "mysql-connector-java-5.1.6-QL4wXukftqejhe6yYMfAig.jar"
+      }, {
+        "location" : "gs://datasets14/staging/mysql-socket-factory-1.0.8-3eJNmeku5UBxyFvnidjKsA.jar",
+        "name" : "mysql-socket-factory-1.0.8-3eJNmeku5UBxyFvnidjKsA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jdbc-socket-factory-core-1.0.8-MkMmEfa_JfoK10zofSKZqg.jar",
+        "name" : "jdbc-socket-factory-core-1.0.8-MkMmEfa_JfoK10zofSKZqg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/google-api-services-sqladmin-v1beta4-rev25-1.22.0-U5Y9slX2dh5gULwAABnXUg.jar",
+        "name" : "google-api-services-sqladmin-v1beta4-rev25-1.22.0-U5Y9slX2dh5gULwAABnXUg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jnr-unixsocket-0.18-uYig9zGq8VKWowZw70ykbA.jar",
+        "name" : "jnr-unixsocket-0.18-uYig9zGq8VKWowZw70ykbA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jnr-ffi-2.1.4-w1RQZm6bcnI0RBum2b3a5w.jar",
+        "name" : "jnr-ffi-2.1.4-w1RQZm6bcnI0RBum2b3a5w.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jffi-1.2.15-Edz1NxN5i3-eSuyL6c227A.jar",
+        "name" : "jffi-1.2.15-Edz1NxN5i3-eSuyL6c227A.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jffi-1.2.15-native-LF0iKhF8w9Ui9uthDz0dYw.jar",
+        "name" : "jffi-1.2.15-native-LF0iKhF8w9Ui9uthDz0dYw.jar"
+      }, {
+        "location" : "gs://datasets14/staging/asm-5.0.3-zOvumfuM3VDhlnaAourAug.jar",
+        "name" : "asm-5.0.3-zOvumfuM3VDhlnaAourAug.jar"
+      }, {
+        "location" : "gs://datasets14/staging/asm-commons-5.0.3-ScS9Ft8FT3tzdvy4DeWiJQ.jar",
+        "name" : "asm-commons-5.0.3-ScS9Ft8FT3tzdvy4DeWiJQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/asm-analysis-5.0.3-9L1cB2ZF-ABGY8w1BE_bMg.jar",
+        "name" : "asm-analysis-5.0.3-9L1cB2ZF-ABGY8w1BE_bMg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/asm-tree-5.0.3-lKvJsBJuHsLBJiXfzlTjLg.jar",
+        "name" : "asm-tree-5.0.3-lKvJsBJuHsLBJiXfzlTjLg.jar"
+      }, {
+        "location" : "gs://datasets14/staging/asm-util-5.0.3-hbI-Nzg8e7kgCirVBnhC4Q.jar",
+        "name" : "asm-util-5.0.3-hbI-Nzg8e7kgCirVBnhC4Q.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jnr-x86asm-1.0.2-AGcHNayyqdFCG1Btx9M4vA.jar",
+        "name" : "jnr-x86asm-1.0.2-AGcHNayyqdFCG1Btx9M4vA.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jnr-constants-0.9.8-RrpzFAcIaH8YQgu7TUapMQ.jar",
+        "name" : "jnr-constants-0.9.8-RrpzFAcIaH8YQgu7TUapMQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jnr-enxio-0.16-LafItAAl18DCoKNWqO8hfQ.jar",
+        "name" : "jnr-enxio-0.16-LafItAAl18DCoKNWqO8hfQ.jar"
+      }, {
+        "location" : "gs://datasets14/staging/jnr-posix-3.0.35-xK7WsfkPGr4i5NUlL0zGqw.jar",
+        "name" : "jnr-posix-3.0.35-xK7WsfkPGr4i5NUlL0zGqw.jar"
+      } ],
+      "workerHarnessContainerImage" : "dataflow.gcr.io/v1beta3/beam-java-batch:beam-2.5.0"
+    } ]
+  },
+  "name" : "sqldataflow-bs140598-0809070601-627df410",
+  "steps" : [ {
+    "kind" : "ParallelRead",
+    "name" : "s1",
+    "properties" : {
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/Create.Values/Read(CreateSource)"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.io.Read$Bounded",
+        "key" : "source",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.sdk.transforms.Create$Values$CreateSource",
+        "shortValue" : "CreateSource",
+        "label" : "Read Source"
+      }, {
+        "namespace" : "org.apache.beam.sdk.transforms.Create$Values$CreateSource",
+        "key" : "endOffset",
+        "type" : "INTEGER",
+        "value" : 1,
+        "label" : "End Read Offset"
+      } ],
+      "format" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "custom_source"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "output"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/Create.Values/Read(CreateSource).out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "org.apache.beam.sdk.coders.VoidCoder"
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ],
+      "custom_source_step_input" : {
+        "metadata" : {
+          "estimated_size_bytes" : {
+            "@type" : "http://schema.org/Integer",
+            "value" : 0
+          }
+        },
+        "spec" : {
+          "@type" : "org.apache.beam.runners.dataflow.internal.CustomSources",
+          "serialized_source" : {
+            "@type" : "http://schema.org/Text",
+            "value" : "glNOQVBQWQAAAAABAAAAAQAAAj+1BtCs7QAFc3IAOW9yZy5hcGFjaGUuYmVhbS5zZGsudHJhbnNmb3Jtcy5DcmVhdGUkVmFsdWVzJAkO8FJTb3VyY2VGbtPBBOUXPQIAA0oACXRvdGFsU2l6ZUwAEGFsbEVsZW1lbnRzQnl0ZXN0ABBMamF2YS91dGlsL0xpc3Q7TAAFY29kZXJ0ACJMb3JnLwmCAC8BghQvc2RrL2MBHQhzL0MBBxQ7eHIAKG9KpwA0aW8uT2Zmc2V0QmFzZWQJlhy/POTGkET6+wmWCGVuZAkiXEoADW1pbkJ1bmRsZVNpemVKAAtzdGFydAkeDHhyACRaYQAQQm91bmQRXTghYHYTf/hRQQIAAHhyAB1aMwAJiRwQi/oQWYzn0wEsBHAACQEAAQkHFQgVAQxzcgBlPk4AJHJlcGFja2FnZWQlmWBfc2Rrc19qYXZhX2NvcmUuY29tLmdvb2dsBQugbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlzdCRTZXJpYWxpemVkRm9ybQANcxwCAAFbAAhlbCmmDHQAE1spojxsYW5nL09iamVjdDt4cHVyERkALgEZAC4NGRyQzlifEHMpbBHbOAF1cgACW0Ks8xf4BghU4BEXBABzWlcBAGMh1hRzLlZvaWQl4Ry5v1Wb6A2vVQE5CHIAJj4JAQhzZGsRMxRBdG9taWMFNRzH7LXMhXRQRgk1ACpqNQAgU3RydWN0dXJlCW4cc78SDtXUNhEJOQAgajkABWgwQ93Via68fvgCAAB4cA=="
+          }
+        }
+      }
+    }
+  }, {
+    "kind" : "ParallelDo",
+    "name" : "s2",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%09%a9%80$%f0C%ac%ed%00%05sr%00!org.apache.beam.sdk.util.DoFnInfo%fe%b2~%06='%92P%02%00%05L%00%04doFnt%00%25Lorg/a%057%00/%017</sdk/transforms/%01=D;L%00%0ainputCodert%00%22LN5%00%00c%01%1d%04s/%05$%012$mainOutput^g%00%5cvalues/TupleTag;L%00%0esideI%01k%c8Viewst%00%14Ljava/lang/Iterable;L%00%11windowingStrategyt%00.R%96%00%0dd%00W>0%00%18;xpsr%00)N5%01%c0io.jdbc.JdbcIO$ReadFn%15%d5%ed%89%e0%07w%14%02%00%06L%00%0aconnectiont%00%15L%05%a3%14sql/Co%11%17!%010dataSourcet%00%16%05%c8%00x%05&%00D%15%18%0c;L%00%17%19& Configura%09X%00<R%d0%00%08io/%01%9d%00/%0d%9d%19L2>%00@;L%00%0fparameterSett!%b7%92Q%00@PreparedStatement%09>,;L%00%05queryt%00+R%98%00%04op%01%b6%08s/V!%d4%18Provide%016%1c%09rowMapp%01%81%00.R:%00:%d2%00%00R%110%10;xr%00#N%a0%01Y%9eE%db4%acD#%06%ce%93%bd%9d%02%00%00xpp!%d6%00DN6%001%d6%0cAuto%05%a5%00_)C%00_ZC%01%1c%04Z%80%fc)|L%12%25%f1%00%149%f1%08Pro%01%cd$iesq%00~%00%0cL%00=%e8%01%12D%09L%00%0fdriverClassNam%05%17,%0cL%00%08password%01'%18%0cL%00%03url%0d%0b%14%08usern%11+%0cxr%00:n%c3%00%09%b9^%fc%01%1c%93%cc%9d%85%88%09:%cd9%10%00=NM%00-%b1%00.%25%0c1%b1%00$!%f7%04ic2%14%004%9c%e2%e1%8f%09%d9W%b0%02%00%01L%00%05eP%08t%00%12E%d0i%98PObject;xpt%00%15com.mysqliC%00D%25%09%00p%25+%0c%13t%00%afA%bb%00:%05 %f0@://google/Customer?cloudSqlInstance=dark-pipe-247510:us-central1:a8Hbase&socketFactory=%01%81%09Y%00.%05P%00.%01%8c%05r%04.S.)%00%00&!r%14=root&1%97%09%0e,useSSL=falseAM%00!a%de%00.%81%81%f0F.invoke.SerializedLambdaoa%d0%94,)6%85%02%00%0aI%00%0eimplMethodKind[%00%0ccapturedArgst%00%13[F:%01%08L%00%0e%09%25%08ingE5%08t%00%11%1d&%05%13%1c;L%00%18funcaf(alInterface%05%1c6%8f%01%04St%01H%0c;L%00%1dJ0%00%00M%05%9aQ%95%0c%1cL%00%22b%25%00%1cSignaturE%bf%1c%1cL%00%09impl%05pA%b5%08%1cL%00%1d%eb%1dQ%00%13%01'%09g>B%00%04%16i%25%da%14tiated%09#%08Typ%09`%1cxp%00%00%00%07ur1!)r%00OI[%1c%90%ceX%9f%10s)lE%d3%1c%00%00%00%01sr%001N%d5%02b%e5%03%a1%c5%1c~%7f%b8.%c6%0e%89%f3%e5%00%00%05%c5%af%01%ca%00%02f%85%05%01%1f%00%0a%91%fa%01%0d%04%0cL%9d%d1%01%11%14%0dL%00%13st%ad+%a9<%18atort%008%8e%ec%04an%0cemen%1d:%81%f6%00'n%db%00m%fd%01%d1%1c%06n%98%f8%e0d%01%e6!%17Z%cc%06%bd,%08PTr%ed%d6 +%16Uq%88%89f%c7%03%a12%10xsr%00%22Nq%00%25!%0cs.Kv%e5%d2 j%00%bd%b9%1d%a3%ca6%02!0%0c%08key%05%16!%03%0c%02L%00%0a%85%16%19%12%0cxr%00*jS%00%10StrucAZ%00d%053%1cs%bf%12%0e%d5%d46%11%09%c7%00 j9%00%05/%1cC%dd%d5%89%ae%bc~%f8%01/a%a1zj%00%18ingUtf8%05;%1cL%0d}%1d%cb%01%cd%a4%01;%08r%00&jj%00%14Atomic%055%1c%c7%ec%b5%cc%85tPF%015%01%f0%00&%01%05%00+%01%05%00%12e%0a(%13t%00%25select %a1%c2t, sex from titanic limit 2sr%00%1f%81%9f@click.example.Sql%c1%824flow$1%e1U0%a0=V%f7q%01l%08ppv%01e%04%22t%c5%0d%00/%16%db%09&%a4%09:7%07I|B%b8%07%18t%00%0dsetP%1e%0b%08%10st%001(%9d[%00Oi`%09%12%0csql/BG%00%0c;)VtE%91~%81%00A%91%0ct%00%18l%a5%13P$expand$a0f5cac7$1t%00/.y%00%0cVoidzw%00%01%fd%006%01%05%00,%01%05%10/sr%00$j%b1%01%01Q%25%af%1c%b9%bfU%9b%e8%0d%afU!C%019%04*sZG%08E%b4%08s.T%1a~%0aH%b3%18yf[%c0z%b5%02%00%02Z%00%09gener%81%a7%0cL%00%02i%e5%b1%18%1cxp%01t%00BN%83%00%0dJ%10PColl%16%16%0al.<init>:329#3d93cb799b3970beA%07%c5T%12%9d%0b%194Hs$EmptyListz%b8%17%b4<%a7%9e%de%01%c4A%e3%00,jv%00B%da%0aH%a4Mf$.%cc%15%e5%02%00%0bZ%00%18allow%c1%aaTtenessSpecifiedZ%00%0dmode%1d%10D%1atimestampCombiner%1d%1d%14%10trigg%1d%13%08L%00%0f:[%00%0ct%00%18L%0e%18%0c%10joda/%01L%08/Du%16%cc%0a@;L%00%0fclosingBehavi%a1!%00A%05->%d6%02%99%b0%00/%22%e3%0b%1a%bd%0b%04$C6C%00%0c;L%00%04%01%c3%08t%00?RK%00)%96%0d=%04in%22*%0c%1c$Accumul%12g%0b%08Mod%0e%86%0b%18%0eonTime%19%9e%00@RS%00n%9e%00%00O2B%00%0e%a4%0c!%042P%01%00tZ%83%0bRW%00%01%902>%00%0c;L%00%07-%86%08t%002%a6%a0%00%00T)%ba%0c;L%00%08)S%0e%f8%0d%003%a6@%00Ia%08Fn;%e5%a3%10%00sr%00%16A%8f!%e7%00.%01%e3%00.1%e7%1c%00%00%02?zQ%ce%d6A%b6%08r%00%1f6%25%00%0e%ab%09%10.Base%1d.DY%19:%f4%8e%02%00%01J%00%07iMillis%09c%01%01%0c~r%00?%01BI!%00.%0e%9b%0e%12%d2%0e9,%00.%09%ce%0cing.%09%a3>!%02%01G%01%01%18%12%00%00xr%00%0eet%12%c8%09%0cEnum%01%19%01%01%01%1dXpt%00%11FIRE_IF_NON_EMPTY~rV8%0bIW%0dsnW%02%01^%01%01%01b%81%898Kt%00%16DISCARDING_%01q(D_PANES~r%00>%be%ec%006o%02%01h%01%01%1dl%00%0b%01a%14_ALWAY%01aRQ%0cRM%01By%02%01Y%01%01%1d]D%0dEND_OF_WINDOWsr%007%a2%c0%00%18DefaultM%96%1c%b1%0a%e3%87%d1%bd:sI4%000%a2F%00%0d?%1c6M3!y%faA%0f%12%9c%0c%0c%0bsub%0d%18%0cst%00%10%c9%d5%a1e%00/%a1T%08;xp!%86%10=sr%006%a2g%00%14GlobalI_ s%96%16%b9%14%02%8a%af%0f%09%ac%00;%a2E%00$NonMerging%09I$FnW%06%0bg%d3%ee%a8%ab%09JR%ca%0aR%9b%01%11@0%c6%04%19y%ba%8a%96W%02%00%00xp"
+      },
+      "non_parallel_inputs" : { },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/ParDo(Read)"
+      },
+      "user_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "org.apache.beam.sdk.io.jdbc.JdbcIO$ReadFn"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.ParDo$SingleOutput",
+        "key" : "fn",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.sdk.io.jdbc.JdbcIO$ReadFn",
+        "shortValue" : "ReadFn",
+        "label" : "Transform Function"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "output",
+        "step_name" : "s1"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "org.apache.beam.sdk.values.PCollection.<init>:329#3d93cb799b3970be"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/ParDo(Read).out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:pair",
+            "is_pair_like" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+            }, {
+              "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+            } ]
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "ParallelDo",
+    "name" : "s3",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%05%d8%f4%16%f0C%ac%ed%00%05sr%00!org.apache.beam.sdk.util.DoFnInfo%fe%b2~%06='%92P%02%00%05L%00%04doFnt%00%25Lorg/a%057%00/%017</sdk/transforms/%01=D;L%00%0ainputCodert%00%22LN5%00%00c%01%1d%04s/%05$%012$mainOutput^g%00%5cvalues/TupleTag;L%00%0esideI%01k%c8Viewst%00%14Ljava/lang/Iterable;L%00%11windowingStrategyt%00.R%96%00%0dd%00W>0%00%18;xpsr%00'N5%01%19%fe|.Filter$1%e2T%88%af%e4%af%fe%81%02%00%01L%00%06this$0t%00'Rr%00%19?%00/%09?%10;xr%00#zi%00!g(%acD#%06%ce%93%bd%9d%02%00%00%05%9d%00%25z4%00%09^d%d2M%b5%90%02%bf%bf%86%02%00%02L%00%09predicatet%005~%9e%00%1cSerializ!T%18Functio!%eb%00%14%15D%18Descrip%01%18%08t%00%12=%8a%14String%01%d8%00)z%a4%00%04PTQK +%16Uq%88%89f%c7%03%01%de%10xsr%00=z;%00N%9f%00Ds$Constant%e1%9e$%b3%bb6%0a%08%25%92%00%05%25%e66%a4%00%14Object)%e7%00%11AE%00.AEL.Boolean%cd r%80%d5%9c%fa%ee%02%00%01Z%0d?%14xp%00t%00%10)U%00.5%04%0csr%00%22N%a9%00I%ee%08.KvE%f0%1cj%00%bd%b9%1d%a3%ca6%25%85%0c%08key%05%16%08q%00~!%95%00%0a%05%9e%19%12%0cxr%00*jS%00$Structured%053%1cs%bf%12%0e%d5%d46%11A%16%08r%00 j9%00%05/%1cC%dd%d5%89%ae%bc~%f8%01/A%e2zj%00%18ingUtf8%05;%1cL%0d}%1d%cb%01%cd%a4%01;%08r%00&jj%00%14Atomic%055%1c%c7%ec%b5%cc%85tPF%015%01%f0%00%17%01%05%04%1csZ%f2%02%25%0a%08s.Tm%f2l%b3%18yf[%c0z%b5%02%00%02Z%00%09generatedL%00%02id%01H%18%0dxp%01t%00BN%8a%00%0dJ%14PColleE%bb|.<init>:329#a32dc9f64f1df03asr%00%1fE%04%a5%11%194Hs$EmptyListz%b8%17%b4<%a7%9e%de%01%c9!9%00,jv%00BN%04%b0%a4Mf$.%cc%15%e5%02%00%0bZ%00%18allowedLatenessSpecifiedZ%00%0dmode%1d%10D%1atimestampCombiner%1d%1d%14%10trigg%1d%13%08L%00%0f:[%00%0ct%00%18L%a1%8c%10joda/%01L%10/Duraa%b1T;L%00%0fclosingBehaviort%00A%05-%c9%25%00/N%ee%05%b5W%ad1%04$C6C%00%0c;L%00%04%01%c3%08t%00?RK%00)%96%0d=%04in%b5%9e%1c$Accumul%05%9b%0cMode%a1%ec%14onTime%19%9e%00@RS%00%bdOB%9e%00%00O2B%00%c1%18!%042P%01%08t%00<%a6W%00%01%902>%00%0c;L%00%07-%86%08t%002%aaI%00)%ba%0c;L%00%08%09%b5%10Fnt%003%a6@%00Ia0Fn;xp%00%00%00%00sr%00%16A%8f!%e7%00.%01%e3%00.1%e7%1c%00%00%02?zQ%ce%d6A%b6%08r%00%1f6%25%00 base.Base%1d.DY%19:%f4%8e%02%00%01J%00%07iMillis%09c%01%01%0c~r%00?%01BI!%00.A!%12F%089%83%00.%09%ce%0cing.%09%a3>!%02%01G%01%01%18%12%00%00xr%00%0eet%a5x%0cEnum%01%19%01%01%01%1dTpt%00%11FIRE_IF_NON_EMPTY~Z%16%06IW%0dsnW%02%01^%01%01%01b%81A8/t%00%16DISCARDING_%01q(D_PANES~r%00>%be%ec%006o%02%01h%01%01%1dl%00%0b%01a%14_ALWAY%01a%00:%a2a%00By%02%01Y%01%01%1d]D%0dEND_OF_WINDOWsr%007%a2_%00%18DefaultM%96%1c%b1%0a%e3%87%d1%bd:sI4%000%a2F%00%0d?%1c6M3!y%faA%0f%e5z%0c%0bsub%0d%18%0cst%00%10%16$%08%a1e%00/%a1T%08;xp!%86%10!sr%006%a2g%00%14GlobalI_ s%96%16%b9%14%02%8a%af%0f%09%ac%00;%a2E%00$NonMerging%09I$FnW%06%0bg%d3%ee%a8%ab%09J%001%a2J%00%11@0%c6%04%19y%ba%8a%96W%02%00%00xp"
+      },
+      "non_parallel_inputs" : { },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Consume/ParDo(Anonymous)"
+      },
+      "user_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "org.apache.beam.sdk.transforms.Filter$1"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.ParDo$SingleOutput",
+        "key" : "fn",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.sdk.transforms.Filter$1",
+        "shortValue" : "",
+        "label" : "Transform Function"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "org.apache.beam.sdk.values.PCollection.<init>:329#3d93cb799b3970be",
+        "step_name" : "s2"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "org.apache.beam.sdk.values.PCollection.<init>:329#a32dc9f64f1df03a"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Consume/ParDo(Anonymous).out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:pair",
+            "is_pair_like" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+            }, {
+              "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+            } ]
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "ParallelDo",
+    "name" : "s4",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%05O%9c%14%f0C%ac%ed%00%05sr%00!org.apache.beam.sdk.util.DoFnInfo%fe%b2~%06='%92P%02%00%05L%00%04doFnt%00%25Lorg/a%057%00/%017</sdk/transforms/%01=D;L%00%0ainputCodert%00%22LN5%00%00c%01%1d%04s/%05$%012$mainOutput^g%00%5cvalues/TupleTag;L%00%0esideI%01k%c8Viewst%00%14Ljava/lang/Iterable;L%00%11windowingStrategyt%00.R%96%00%0dd%00W>0%00%18;xpsr%00b>5%01Trunners.dataflow.Batch%01%8d$Overrides$%15%13hAsList$ToIsmRecordForGlobal%09p!=x%d3%c4/%f5%cb!5]%02%00%01J%00%0dindexInBundlexr%00#>%81%00!%b69%7f%25%bc4%acD#%06%ce%93%bd%9d%02%00%00xp%00%0d%01%0csr%00%22N<%00)%86%08.Kv%25%88@j%00%bd%b9%1d%a3%ca6%02%00%02L%00%08key%05%16%08q%00~%01%10%00%0a%25%1c%19%12%0cxr%00*jS%00$Structured%053%1cs%bf%12%0e%d5%d46%11%01%96%08r%00 j9%00%05/%1cC%dd%d5%89%ae%bc~%f8%01/!zzj%00%18ingUtf8%05;%1cL%0d}%1d%cb%01%cd%a4%01;%08r%00&jj%00%14Atomic%055%1c%c7%ec%b5%cc%85tPF%015%01%f0%00%0b%01%05%04%10sZr%01%25%0a%08s.TM%8ax%b3%18yf[%c0z%b5%02%00%02Z%00%09generatedL%00%02idt%00%12]%94%04St%01%ab%18;xp%01t%00BN%9a%00%0dZ%a8PCollection.<init>:329#1abfe6cb40bcf2e7sr%00%1fA%f1i%b9%194%18s$EmptyAo%1cz%b8%17%b4<%a7%9e%de%01%d9!I%00,jv%00I%86}&%b0%a4Mf$.%cc%15%e5%02%00%0bZ%00%18allowedLatenessSpecifiedZ%00%0dmode%1d%10D%1atimestampCombiner%1d%1d%14%10trigg%1d%13%08L%00%0f:[%00%0ct%00%18L%814%10joda/%01L%10/Dura!%0eT;L%00%0fclosingBehaviort%00A%05-%89%cdR%96%04u%ffm%d9%04$C6C%00%0c;L%00%04%01%c3%08t%00?RK%00)%96%0d=%04in%95F%1c$Accumul%05%9b%08Mod%81l%18%0eonTime%19%9e%00@RS%00y%b5F%9e%00%00O2B%00%81%c0!%042P%01%08t%00<%a6W%00%01%902>%00%0c;L%00%07-%86%08t%002%aaI%00)%ba%0c;L%00%08)S%10Fnt%003%a6@%00Ia%08Fn;%89%99%0csr%00%16A%8f!%e7%00.%01%e3%00.1%e7%1c%00%00%02?zQ%ce%d6A%b6%08r%00%1f6%25%00 base.Base%1d.%10Y%19:%f4%8e%a54%1c%07iMillis%09c%01%01%0c~r%00?%01BI!%00.%c1%b7>8%05%09%ce%0cing.%09%a3>!%02%01G%01%01%18%12%00%00xr%00%0eet%c1e%10.Enum%01%19%01%01%01%1d`pt%00%11FIRE_IF_NON_EMPTY~r%00=N%81%00IW%0dsnW%02%01^%01%01%01b%81%998$t%00%16DISCARDING_%01q(D_PANES~r%00>Nk%00YoF%ec%006o%02%01h%01%01%1dl%00%0b%01a%14_ALWAY%01a%00:%a2a%00By%02%01Y%01%01%1d]D%0dEND_OF_WINDOWsr%007%a2_%00%18DefaultM%96%1c%b1%0a%e3%87%d1%bd:sI4%000%a2F%00%0d?@6M3!y%faA%0f%02%00%01L%00%0bsub%0d%18%0cst%00%10%a9%c2%0e%1e%09%00/%a1T%08;xp!%86%10%16sr%006%a2g%00.%e9%07 s%96%16%b9%14%02%8a%af%0f%09%ac%00;%a2E%00$NonMergingI%a8$FnW%06%0bg%d3%ee%a8%ab%09J%001%a2J%00%11@0%c6%04%19y%ba%8a%96W%02%00%00xp"
+      },
+      "non_parallel_inputs" : { },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/View.AsIterable/ParDo(ToIsmRecordForGlobalWindow)"
+      },
+      "user_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "org.apache.beam.runners.dataflow.BatchViewOverrides$BatchViewAsList$ToIsmRecordForGlobalWindowDoFn"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.ParDo$SingleOutput",
+        "key" : "fn",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.runners.dataflow.BatchViewOverrides$BatchViewAsList$ToIsmRecordForGlobalWindowDoFn",
+        "shortValue" : "ToIsmRecordForGlobalWindowDoFn",
+        "label" : "Transform Function"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "org.apache.beam.sdk.values.PCollection.<init>:329#a32dc9f64f1df03a",
+        "step_name" : "s3"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "org.apache.beam.sdk.values.PCollection.<init>:329#1abfe6cb40bcf2e7"
+        },
+        "use_indexed_format" : {
+          "@type" : "http://schema.org/Boolean",
+          "value" : true
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/View.AsIterable/ParDo(ToIsmRecordForGlobalWindow).out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "org.apache.beam.sdk.coders.CustomCoder",
+            "type" : {
+              "@type" : "http://schema.org/Text",
+              "value" : "org.apache.beam.runners.dataflow.internal.IsmFormat$IsmRecordCoder"
+            },
+            "serialized_coder" : {
+              "@type" : "http://schema.org/Text",
+              "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%03[%e3%0a%f0y%ac%ed%00%05sr%00Borg.apache.beam.runners.dataflow.internal.IsmFormat$IsmRecordCoder%b8%f0:%25%cbR%bc%db%02%00%04I%00%1enumberOfMetadataShardKeyCodersI%00%16n%0d!%04Sh.%19%00%0cL%00%12k%01%25 mponentCo%01.ht%00%10Ljava/util/List;L%00%0avalue%05! t%00%22Lorg/a%05%c0%00/%01%c0%14/sdk/c%05>%00/%05$%10;xr%00&>%e5%00%0csdk.%09%25%18.Custom%05+8j%b0%08%9d%0b;%1d%0b%02%00%00xr%00 n5%00%01a%1cC%dd%d5%89%ae%bc~%f8%01/%04p%00%09%01%10%01sr%00y>9%00$repackaged%25c%00_-c4_google_cloud_1p%00_%01%f1%10.com.%09%1f%01%0bPmon.collect.Immutable!%0f($Serialized!%9b%09%84L%00%00%02%00%01[%00%08elementst%00%13[)G<lang/Object;xpur%11%19%00.%01%19%00.%0d%19%1c%90%ceX%9f%10s)l%11%d7%10%02sr%00;>%d3%00!Altransforms.windowing.GlobalW%05%10%04$C!'%1c3|%aa%f4%14%1e%87%c3%01P%08r%00*NJ%00-%8b StructureIX%1cs%bf%12%0e%d5%d46%11%019 q%00~%00%04sr%00-j?%000BigEndianLong%05{%1c%daI%95%ca%ee%c6%0e:%01Bv%06%02%14Atomic%055%1c%c7%ec%b5%cc%85tPF%015%01w%10%0csr%00=Nw%00A%95%00.%09%ea(edValue$Ful%0d%fc%0d%12%05R4%89%1c-%ad%b5|%0d%bf%02%00%02L%00%0b),%05%19%01_%0c%02L%00%0c%09%13%00s%19%14%0cxr%009%9as%002%81%00%05B(%8d~v%cdC|%d3%f0%02%00%012.%03%05n%15%d3%00%22N`%00-%89%04Kv%05I%1cj%00%bd%b9%1d%a3%ca6%05%b8%04%08ka%9f%04de%09GjY%00z%e2%01%18ingUtf8%05a%1cL%0d}%1d%cb%01%cd%a41k%00%0f%01%a3%00%17%01%05%04%0dsv+%02%00Ci%0e%08ion%05I%1c%8e%c7%f8%b7%1bi.%b0%01I%08r%00,j%db%00%0cIteri>%00k).%1c%b63%8d%9f%0c%e5Y%f4%05%e5%00%0cm4%05U%01%88!%9e%00i%0d3%18Namet%00%12}K%04St%01%cf%00;)T%01/4%0dt%00%0aCollection"
+            }
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "CollectionToSingleton",
+    "name" : "s5",
+    "properties" : {
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/View.AsIterable/CreateDataflowView"
+      },
+      "display_data" : [ ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "org.apache.beam.sdk.values.PCollection.<init>:329#1abfe6cb40bcf2e7",
+        "step_name" : "s4"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "output"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/View.AsIterable/CreateDataflowView.out0"
+        },
+        "encoding" : {
+          "@type" : "kind:stream",
+          "is_stream_like" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:windowed_value",
+            "is_wrapper" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.CustomCoder",
+              "type" : {
+                "@type" : "http://schema.org/Text",
+                "value" : "org.apache.beam.runners.dataflow.internal.IsmFormat$IsmRecordCoder"
+              },
+              "serialized_coder" : {
+                "@type" : "http://schema.org/Text",
+                "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%03[%e3%0a%f0y%ac%ed%00%05sr%00Borg.apache.beam.runners.dataflow.internal.IsmFormat$IsmRecordCoder%b8%f0:%25%cbR%bc%db%02%00%04I%00%1enumberOfMetadataShardKeyCodersI%00%16n%0d!%04Sh.%19%00%0cL%00%12k%01%25 mponentCo%01.ht%00%10Ljava/util/List;L%00%0avalue%05! t%00%22Lorg/a%05%c0%00/%01%c0%14/sdk/c%05>%00/%05$%10;xr%00&>%e5%00%0csdk.%09%25%18.Custom%05+8j%b0%08%9d%0b;%1d%0b%02%00%00xr%00 n5%00%01a%1cC%dd%d5%89%ae%bc~%f8%01/%04p%00%09%01%10%01sr%00y>9%00$repackaged%25c%00_-c4_google_cloud_1p%00_%01%f1%10.com.%09%1f%01%0bPmon.collect.Immutable!%0f($Serialized!%9b%09%84L%00%00%02%00%01[%00%08elementst%00%13[)G<lang/Object;xpur%11%19%00.%01%19%00.%0d%19%1c%90%ceX%9f%10s)l%11%d7%10%02sr%00;>%d3%00!Altransforms.windowing.GlobalW%05%10%04$C!'%1c3|%aa%f4%14%1e%87%c3%01P%08r%00*NJ%00-%8b StructureIX%1cs%bf%12%0e%d5%d46%11%019 q%00~%00%04sr%00-j?%000BigEndianLong%05{%1c%daI%95%ca%ee%c6%0e:%01Bv%06%02%14Atomic%055%1c%c7%ec%b5%cc%85tPF%015%01w%10%0csr%00=Nw%00A%95%00.%09%ea(edValue$Ful%0d%fc%0d%12%05R4%89%1c-%ad%b5|%0d%bf%02%00%02L%00%0b),%05%19%01_%0c%02L%00%0c%09%13%00s%19%14%0cxr%009%9as%002%81%00%05B(%8d~v%cdC|%d3%f0%02%00%012.%03%05n%15%d3%00%22N`%00-%89%04Kv%05I%1cj%00%bd%b9%1d%a3%ca6%05%b8%04%08ka%9f%04de%09GjY%00z%e2%01%18ingUtf8%05a%1cL%0d}%1d%cb%01%cd%a41k%00%0f%01%a3%00%17%01%05%04%0dsv+%02%00Ci%0e%08ion%05I%1c%8e%c7%f8%b7%1bi.%b0%01I%08r%00,j%db%00%0cIteri>%00k).%1c%b63%8d%9f%0c%e5Y%f4%05%e5%00%0cm4%05U%01%88!%9e%00i%0d3%18Namet%00%12}K%04St%01%cf%00;)T%01/4%0dt%00%0aCollection"
+              }
+            }, {
+              "@type" : "kind:global_window"
+            } ]
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "ParallelDo",
+    "name" : "s6",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%07X%9f%1d%f0C%ac%ed%00%05sr%00!org.apache.beam.sdk.util.DoFnInfo%fe%b2~%06='%92P%02%00%05L%00%04doFnt%00%25Lorg/a%057%00/%017</sdk/transforms/%01=D;L%00%0ainputCodert%00%22LN5%00%00c%01%1d%04s/%05$%012$mainOutput^g%00%5cvalues/TupleTag;L%00%0esideI%01k%c8Viewst%00%14Ljava/lang/Iterable;L%00%11windowingStrategyt%00.R%96%00%0dd%00W>0%00%18;xpsr%002N5%01%d0io.jdbc.JdbcIO$Reparallelize$1. %a1I%f5%fd%fah%02%00%01L%00%06this$0t%002R}%00%08io/%01J%00/NJ%00%10;xr%00#N%7f%009}%25%ba(%acD#%06%ce%93%bd%9d%02%00%00%05%b3%000N4%00n%b3%00%1c%25%b4%a9E%a1%9e%b4r%01A%08r%00)N?%00%1ds%04PT1%fc +%16Uq%88%89f%c7%03%01y%10xsr%00%22N;%00)%f6%08.Kv%25%f8@j%00%bd%b9%1d%a3%ca6%02%00%02L%00%08key%05%16%08q%00~%01%10%00%0a%25%8c%19%12%0cxr%00*jS%00$Structured%053%1cs%bf%12%0e%d5%d46%11%09%c7%00 j9%00%05/%1cC%dd%d5%89%ae%bc~%f8%01/!%eazj%00%18ingUtf8%05;%1cL%0d}%1d%cb%01%cd%a4%01;%08r%00&jj%00%14Atomic%055%1c%c7%ec%b5%cc%85tPF%015%01%f0%00%0f%01%05%04%14sZ%e4%01%25%0a%08s.TM%fax%b3%18yf[%c0z%b5%02%00%02Z%00%09generatedL%00%02idt%00%12}%04%04St%01%ab%18;xp%01t%00BN%9a%00%0dZ%a8PCollection.<init>:329#629bc2229cefe94dsr%00e>F%00$repackaged%85H%14_sdks_a%868_core.com.googl%05%0b%10mon.c%09k%14.Immuta%a1$List$Seriaa3%14dForm%00%0d%01D%02%00%01[%00%08elementst%00%13[%1d%dd(Object;xpur%11%19%00.a%fa%00.%0d%19%1c%90%ceX%9f%10s)l!d p%00%00%00%01sr%00A>%bf%00%81%f7F%05%01%85O%18$Simple=%1c%01%17%1c%e4=%bd%05%c6%07O%9f%a5%17%00%05E%d0!%bc%18%02L%00%03tag%01%0b%1c%03L%00%06view%a11%04'LN%fc%04yA%00/%01S%00F%a13%04%0fw%85t%18Mapping%01<%00:~<%00%092%08ing%8d%b0%15<R%f3%04%01%9b%0c%05xps%01%08%10%0esr%00$N%0b%01%05%d0%10s.VoiiG%1c%b9%bfU%9b%e8%0d%afU!D%019%00%13%01%05%00%11%05D%10%15%01t%00]ND%00%b2O%01Qo%5c404#98f8ba3dc812a76dsr%00:%aea%00%b1%f2)T%1ch%8e%c9%00%8f^%05%a6%01%bb%08r%00%25NI%009%88%00.%094%1c=%fa%83%97%cf%dd%02y%014%81%07%00Vz6%005%82%14.AutoV%c1%a1%18_Global%c9B%00s2%0e%005%a0%1c%8ai%b1Kd %8c%fc%01g%04r%00!%e7B%8b%07%1d%9b%19e2[%00%00$.%0e%00%15[%1c%bc+%1f=@'%e4f%09[%008%a2%c0%00%09%b0%15G ?2%c0%c6%13[l6%02%c1%b7H%0fmaximumLookbackt%00%18%01%b48/joda/time/Dura%81=%e9'%00%16%01v%01%1d%00.%01%1d%00.%11%1d%1c%00%00%02?zQ%ce%d6%09%9b%00%1f6%25%00 base.Base%1d.DY%19:%f4%8e%02%00%01J%00%07iMillise%c8%05%01%0csr%00,%01B>%c3%08%00v!%84%04s.%09%cf%fd%f1%b0%a4Mf$.%cc%15%e5%02%00%0bZ%00%18allowedLatenessSpecifiedZ%00%0dmode%1d%10%00%1a%01%c30stampCombiner%1d%1d%14%10trigg%1d%13%08L%00%0f:[%00a0T-L%00%0fclosingBehaviort%00A%25C%09%bf%00/NK%095%f7m%de%04$C6C%00%0c;L%00%04%01%ad%08t%00?RK%00)%0a%0d=%04in%22%fb%08%1c$Accumul%25%b1%0cMode%0eI%09%14onTime%19%9e%00@RS%00Y%95F%9e%00%00O2B%00%81%82B:%01%08t%00<%a6W%00%01%902x%01%0c;L%00%07-p%00tZA%09R%a0%00%00T)%a4%0c;L%00%08)S%10Fnt%003%a6%89%00IK%00FA%dcAz!%d1%101~r%00?N~%02%19%81}%b6%09A>%bf%01%01L%01%01%18%12%00%00xr%00%0e%e12%c9%be%08Enu%f5%00%01%1d`pt%00%11FIRE_IF_NON_EMPTY~r%00=N%81%00)%f5%0dsn%f5%01%01{%01%01%01b%01%d38;t%00%16DISCARDING_%01q(D_PANES~r%00>Nk%00n%ec%006%0d%02%01h%01%01%1dl%00%0b%01a%14_ALWAY%01aR%e7%05Ra%00B%17%02%01Y%01%01%1d]D%0dEND_OF_WINDOWsr%007%a2%c0%00%18DefaultM4%1c%b1%0a%e3%87%d1%bd:s%89%b2%000%a2F%00%0d?%1c6M3!y%faA%0f%a5E%0c%0bsub%0d%18%0cst%00%10%16%c8%08%0eq%0d%00/%0e%00%09%a99%00%1fE%06%01%15%00.&%91%09%18s$Empty%01&%1cz%b8%17%b4<%a7%9e%de%01%90%c1%9f%006%a2%92%00.,%06 s%96%16%b9%14%02%8a%af%0f%01G%08r%00;%a2E%00$NonMergingI%d3$FnW%06%0bg%d3%ee%a8%ab%09J%001%a2J%00%11@D%c6%04%19y%ba%8a%96W%02%00%00xpq%00~%009"
+      },
+      "non_parallel_inputs" : {
+        "org.apache.beam.sdk.values.PCollectionViews$SimplePCollectionView.<init>:404#98f8ba3dc812a76d" : {
+          "@type" : "OutputReference",
+          "output_name" : "output",
+          "step_name" : "s5"
+        }
+      },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Identity"
+      },
+      "user_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "org.apache.beam.sdk.io.jdbc.JdbcIO$Reparallelize$1"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.ParDo$SingleOutput",
+        "key" : "fn",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.sdk.io.jdbc.JdbcIO$Reparallelize$1",
+        "shortValue" : "",
+        "label" : "Transform Function"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "org.apache.beam.sdk.values.PCollection.<init>:329#3d93cb799b3970be",
+        "step_name" : "s2"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "org.apache.beam.sdk.values.PCollection.<init>:329#629bc2229cefe94d"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Identity.out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:pair",
+            "is_pair_like" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+            }, {
+              "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+            } ]
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "ParallelDo",
+    "name" : "s7",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%05/%f1%13%f0C%ac%ed%00%05sr%00!org.apache.beam.sdk.util.DoFnInfo%fe%b2~%06='%92P%02%00%05L%00%04doFnt%00%25Lorg/a%057%00/%017</sdk/transforms/%01=D;L%00%0ainputCodert%00%22LN5%00%00c%01%1d%04s/%05$%012$mainOutput^g%00%5cvalues/TupleTag;L%00%0esideI%01k%c8Viewst%00%14Ljava/lang/Iterable;L%00%11windowingStrategyt%00.R%96%00%0dd%00W>0%00%18;xpsr%00CN5%01%19%fe%f0<.Reshuffle$ViaRandomKey$AssignShardFn%80%f3Y%d2%a4%b8%bc%94%02%00%01I%00%05shardxr%00#oJ%8f%01%1dZ!XP%acD#%06%ce%93%bd%9d%02%00%00xp%00%00%00%00sr%00%22N%92%00)[%08.Kv%25]@j%00%bd%b9%1d%a3%ca6%02%00%02L%00%08key%05%16%08q%00~%01%10%00%0a%05%f1%19%12%0cxr%00*jS%00$Structured%053%1cs%bf%12%0e%d5%d46%11%01%92%08r%00 j9%00%05/%1cC%dd%d5%89%ae%bc~%f8%01/!Ozj%00%18ingUtf8%05;%1cL%0d}%1d%cb%01%cd%a4%01;%08r%00&jj%00%14Atomic%055%1c%c7%ec%b5%cc%85tPF%015%01%f0%00%0b%01%05%04%10sZn%01%25%0a%08s.TM_x%b3%18yf[%c0z%b5%02%00%02Z%00%09generatedL%00%02idt%00%12]i%04St%01%ab%18;xp%01t%00BN%9a%00%0dZ%a8PCollection.<init>:329#fc1e932efb9a0f58sr%00%1fA%c6i%8e%194Hs$EmptyListz%b8%17%b4<%a7%9e%de%01%d9!I%00,jv%00B%cb%02%b0%a4Mf$.%cc%15%e5%02%00%0bZ%00%18allowedLatenessSpecifiedZ%00%0dmode%1d%10D%1atimestampCombiner%1d%1d%14%10trigg%1d%13%08L%00%0f:[%00%0ct%00%18L%81%09%10joda/%01L%10/Dura!%0eT;L%00%0fclosingBehaviort%00A%05-%89%a2Rk%04u%d4m%ae%04$C6C%00%0c;L%00%04%01%c3%08t%00?RK%00)%96%0d=%04in%95%1b%1c$Accumul%05%9b%08Mod%81A%18%0eonTime%19%9e%00@RS%00y%b1F%9e%00%00O2B%00%81%95!%042P%01%08t%00<%a6W%00%01%902>%00%0c;L%00%07-%86%08t%002%aaI%00)%ba%0c;L%00%08)S%10Fnt%003%a6@%00Ia%08Fn;%95%95%00%16A%8f!%e7%00.%01%e3%00.1%e7%1c%00%00%02?zQ%ce%d6A%b6%08r%00%1f6%25%00 base.Base%1d.DY%19:%f4%8e%02%00%01J%00%07iMillis%09c%01%01%0c~r%00?%01BI!%00.%c1%8c%c5%c39%83%00.%09%ce%0cing.%09%a3>!%02%01G%01%01%18%12%00%00xr%00%0eet%c1:%10.Enum%01%19%01%01%01%1d`pt%00%11FIRE_IF_NON_EMPTY~r%00=N%81%00IW%0dsnW%02%01^%01%01%01b%81%998$t%00%16DISCARDING_%01q(D_PANES~r%00>Nk%00n%ec%006o%02%01h%01%01%1dl%00%0b%01a%14_ALWAY%01a%00:%a2a%00By%02%01Y%01%01%1d]D%0dEND_OF_WINDOWsr%007%a2_%00%18DefaultM%96%1c%b1%0a%e3%87%d1%bd:sI4%000%a2F%00%0d?@6M3!y%faA%0f%02%00%01L%00%0bsub%0d%18%0cst%00%10%a9%c2%10util/%a1T%08;xp!%86%10%16sr%006%a2g%00%14GlobalI_ s%96%16%b9%14%02%8a%af%0f%09%ac%00;%a2E%00$NonMerging%09I$FnW%06%0bg%d3%ee%a8%ab%09J%001%a2J%00%11@0%c6%04%19y%ba%8a%96W%02%00%00xp"
+      },
+      "non_parallel_inputs" : { },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Pair with random key"
+      },
+      "user_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "org.apache.beam.sdk.transforms.Reshuffle$ViaRandomKey$AssignShardFn"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.ParDo$SingleOutput",
+        "key" : "fn",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.sdk.transforms.Reshuffle$ViaRandomKey$AssignShardFn",
+        "shortValue" : "AssignShardFn",
+        "label" : "Transform Function"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "org.apache.beam.sdk.values.PCollection.<init>:329#629bc2229cefe94d",
+        "step_name" : "s6"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "org.apache.beam.sdk.values.PCollection.<init>:329#fc1e932efb9a0f58"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Pair with random key.out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:pair",
+            "is_pair_like" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.VarIntCoder"
+            }, {
+              "@type" : "kind:pair",
+              "is_pair_like" : {
+                "@type" : "http://schema.org/Boolean",
+                "value" : true
+              },
+              "component_encodings" : [ {
+                "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+              }, {
+                "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+              } ]
+            } ]
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "Bucket",
+    "name" : "s8",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%0a%8a%01%22*%0a%05Coder%12!%0a%1f%0a%1d%0a%1bbeam:coder:global_window:v1*%5c%0a+bs140598-docker-apache.bintray.io/beam/java%12-%0a+bs140598-docker-apache.bintray.io/beam/javaj%8b%03%0a%ea%02%0a%ba%02%0a%1abeam:windowfn:javasdk:v0.1%1a%9b%02%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%01%07%a9%03%f0L%ac%ed%00%05sr%00)org.apache.beam.sdk.util.IdentityWindowFn%e7%97%89%dd/%a8%86W%02%00%01L%00%05codert%00%22Lorg/a%05@%00/%01@%10/sdk/%05%1d,s/Coder;xr%00;Ne%000transforms.wi%01c4ing.NonMerging%11w8W%06%0bg%d3%ee%a8%ab%02%00%00xr%001%a2J%00%11@%1c%c6%04%19y%ba%8a%96W%01@%04ps%ae%8c%00%14Global%09H4$Coder3|%aa%f4%14%1e%87%c3%01L%08r%00*N%8c%00%09%fb(.Structured%059%1cs%bf%12%0e%d5%d46%11%099%00 j9%00%05/0C%dd%d5%89%ae%bc~%f8%02%00%00xp%12+bs140598-docker-apache.bintray.io/beam/java%1a%05Coder%22%02b%00(%010%018%02@%f7%a7%8d%af%ba%93%b1%10H%01P%01"
+      },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Reshuffle/Window.Into()/Window.Assign"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.windowing.Window$Assign",
+        "key" : "windowFn",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.sdk.util.IdentityWindowFn",
+        "shortValue" : "IdentityWindowFn",
+        "label" : "Windowing Function"
+      }, {
+        "namespace" : "org.apache.beam.sdk.transforms.windowing.Window$Assign",
+        "key" : "trigger",
+        "type" : "STRING",
+        "value" : "ReshuffleTrigger()",
+        "label" : "Trigger"
+      }, {
+        "namespace" : "org.apache.beam.sdk.transforms.windowing.Window$Assign",
+        "key" : "accumulationMode",
+        "type" : "STRING",
+        "value" : "DISCARDING_FIRED_PANES",
+        "label" : "Accumulation Mode"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "org.apache.beam.sdk.values.PCollection.<init>:329#fc1e932efb9a0f58",
+        "step_name" : "s7"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "output"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Reshuffle/Window.Into()/Window.Assign.out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:pair",
+            "is_pair_like" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.VarIntCoder"
+            }, {
+              "@type" : "kind:pair",
+              "is_pair_like" : {
+                "@type" : "http://schema.org/Boolean",
+                "value" : true
+              },
+              "component_encodings" : [ {
+                "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+              }, {
+                "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+              } ]
+            } ]
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "GroupByKey",
+    "name" : "s9",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%0a%8a%01%22*%0a%05Coder%12!%0a%1f%0a%1d%0a%1bbeam:coder:global_window:v1*%5c%0a+bs140598-docker-apache.bintray.io/beam/java%12-%0a+bs140598-docker-apache.bintray.io/beam/javaj%8b%03%0a%ea%02%0a%ba%02%0a%1abeam:windowfn:javasdk:v0.1%1a%9b%02%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%01%07%a9%03%f0L%ac%ed%00%05sr%00)org.apache.beam.sdk.util.IdentityWindowFn%e7%97%89%dd/%a8%86W%02%00%01L%00%05codert%00%22Lorg/a%05@%00/%01@%10/sdk/%05%1d,s/Coder;xr%00;Ne%000transforms.wi%01c4ing.NonMerging%11w8W%06%0bg%d3%ee%a8%ab%02%00%00xr%001%a2J%00%11@%1c%c6%04%19y%ba%8a%96W%01@%04ps%ae%8c%00%14Global%09H4$Coder3|%aa%f4%14%1e%87%c3%01L%08r%00*N%8c%00%09%fb(.Structured%059%1cs%bf%12%0e%d5%d46%11%099%00 j9%00%05/0C%dd%d5%89%ae%bc~%f8%02%00%00xp%12+bs140598-docker-apache.bintray.io/beam/java%1a%05Coder%22%02b%00(%010%018%02@%f7%a7%8d%af%ba%93%b1%10H%01P%01"
+      },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Reshuffle/GroupByKey"
+      },
+      "display_data" : [ ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "output",
+        "step_name" : "s8"
+      },
+      "disallow_combiner_lifting" : {
+        "@type" : "http://schema.org/Boolean",
+        "value" : false
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "output"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Reshuffle/GroupByKey.out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:pair",
+            "is_pair_like" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.VarIntCoder"
+            }, {
+              "@type" : "kind:stream",
+              "is_stream_like" : {
+                "@type" : "http://schema.org/Boolean",
+                "value" : true
+              },
+              "component_encodings" : [ {
+                "@type" : "kind:pair",
+                "is_pair_like" : {
+                  "@type" : "http://schema.org/Boolean",
+                  "value" : true
+                },
+                "component_encodings" : [ {
+                  "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+                }, {
+                  "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+                } ]
+              } ]
+            } ]
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ],
+      "is_merging_window_fn" : {
+        "@type" : "http://schema.org/Boolean",
+        "value" : false
+      }
+    }
+  }, {
+    "kind" : "ParallelDo",
+    "name" : "s10",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%05%fd%de%17%f0C%ac%ed%00%05sr%00!org.apache.beam.sdk.util.DoFnInfo%fe%b2~%06='%92P%02%00%05L%00%04doFnt%00%25Lorg/a%057%00/%017</sdk/transforms/%01=D;L%00%0ainputCodert%00%22LN5%00%00c%01%1d%04s/%05$%012$mainOutput^g%00%5cvalues/TupleTag;L%00%0esideI%01k%c8Viewst%00%14Ljava/lang/Iterable;L%00%11windowingStrategyt%00.R%96%00%0dd%00W>0%00%18;xpsr%00T>5%01%a8runners.dataflow.ReshuffleOverrideFactory$R%11%19%a0WithOnlyTrigger$1%e0%c5%12U%b3w%09%c7%02%00%01L%00%06this$0t%00TL>5%01%0dl%00/%11l%00/%c2l%00%10;xr%00#>%c3%00!%f89%c1%25%fe(%acD#%06%ce%93%bd%9d%02%00%00%05%f7%00R>4%00%0d%8b%ea%f7%00%1c%cb%93UlR%0cH%7f%01c%08r%00)>a%00:%95%00%04PTQb +%16Uq%88%89f%c7%03%01%9b%10xsr%00%22N;%00I%5c%08.KvE^@j%00%bd%b9%1d%a3%ca6%02%00%02L%00%08key%05%16%08q%00~%01%10%00%0a%25%f2%19%12%0cxr%00*jS%00$Structured%053%1cs%bf%12%0e%d5%d46%11%09%c7%00 j9%00%05/%1cC%dd%d5%89%ae%bc~%f8%01/AP%00&j1%00%10VarIniC%1c%c0K2%da%a9KVh%017%00rr5%00%14Atomic%05l%1c%c7%ec%b5%cc%85tPF%015%01%ec%10%0fsr%00(jp%00q/%05=%1c%0d[9%22%cf%00F%b4%01=%08r%00,%8a7%00%08Lik%09;%1c%b63%8d%9f%0c%e5Y%f4%25n%14%0celeme%0d%c7%01%86%10%02L%00%0cim%99%18Namet%00%12}%b3%18String;%0d%b0%010%04%0es%82%90%01%18ingUtf8%05%b8%1cL%0d}%1d%cb%01%cd%a4%01%b8%01?%00%13%01%05%0c%1bt%00%08%11%de%00sZ%02%03E%06%08s.T%8d%5cl%b3%18yf[%c0z%b5%02%00%02Z%00%09generatedL%00%02id%01S%18%17xp%01t%00BN%18%01%0dJ%a8PCollection.<init>:329#c6bc66e4fa08de96sr%00%1f%81%b3%a9{%194Hs$EmptyListz%b8%17%b4<%a7%9e%de%01%d4A5R%8e%01%0dvB%b8%04%b0%a4Mf$.%cc%15%e5%02%00%0bZ%00%18allowedLatenessSpecifiedZ%00%0dmode%1d%10D%1atimestampCombiner%1d%1d%04%10t%89%bc%15%13%08L%00%0f:[%00%0ct%00%18L%81%c1%10joda/%01L%10/Dura!%0eT;L%00%0fclosingBehaviort%00A%05-%c9%8fRX%06%b5%c1%ad%9b%04$C6C%00%0c;L%00%04%01%c3%08t%00?RK%00) %0d=%04in%d5%08%1c$Accumul%05%9b%08Mod%c1.%18%0eonTime%19%9e%00@RS%00%b95F%9e%00%00O2B%00%c1%82!%042P%01%08t%00<%a6W%00%01%902>%00%0c;L%00%07-%86%08t%002%aaI%00)%ba%0c;L%00%08)S%10Fnt%003%a6@%00Ia0Fn;xp%00%00%00%00sr%00%16a%05!%e7%00.%01%e3%00.1%e7%1c%00%00%02?zQ%ce%d6A%b6%08r%00%1f6%25%00 base.Base%1d.DY%19:%f4%8e%02%00%01J%00%07iMillis%09c%01%01%0c~r%00?%01BI!%00.%0ey%08>#%06%09%ce%0cing.%09%a3>!%02%01G%01%01%18%12%00%00xr%00%0eet%0e'%08%10.Enum%01%19%01%01%01%1d`pt%00%11FIRE_IF_NON_EMPTY~r%00=N%81%00IW%0dsnW%02%01^%01%01%01b%81A8/t%00%16DISCARDING_%01q(D_PANES~r%00>Nk%00YoF%ec%006o%02%01h%01%01%1dl%00%0b%01a%14_ALWAY%01a%00:%a2a%00By%02%01Y%01%01%1d]D%0dEND_OF_WINDOWsr%007%a2_%00%18DefaultM%96%1c%b1%0a%e3%87%d1%bd:sI4%000%a2F%00%0d?%1c6M3!y%faA%0f%12I%09%0c%0bsub%0d%18%0cst%00%10%c9e%0e%e0%0a%00/%a1T%08;xp!%86%10!sr%006%a2g%00%14GlobalI_ s%96%16%b9%14%02%8a%af%0f%09%ac%00;%a2E%00$NonMerging%09I$FnW%06%0bg%d3%ee%a8%ab%09J%001%a2J%00%11@0%c6%04%19y%ba%8a%96W%02%00%00xp"
+      },
+      "non_parallel_inputs" : { },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Reshuffle/ExpandIterable"
+      },
+      "user_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "org.apache.beam.runners.dataflow.ReshuffleOverrideFactory$ReshuffleWithOnlyTrigger$1"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.ParDo$SingleOutput",
+        "key" : "fn",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.runners.dataflow.ReshuffleOverrideFactory$ReshuffleWithOnlyTrigger$1",
+        "shortValue" : "",
+        "label" : "Transform Function"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "output",
+        "step_name" : "s9"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "org.apache.beam.sdk.values.PCollection.<init>:329#c6bc66e4fa08de96"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Reshuffle/ExpandIterable.out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:pair",
+            "is_pair_like" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.VarIntCoder"
+            }, {
+              "@type" : "kind:pair",
+              "is_pair_like" : {
+                "@type" : "http://schema.org/Boolean",
+                "value" : true
+              },
+              "component_encodings" : [ {
+                "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+              }, {
+                "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+              } ]
+            } ]
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "ParallelDo",
+    "name" : "s11",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%08%12%98!%f0C%ac%ed%00%05sr%00!org.apache.beam.sdk.util.DoFnInfo%fe%b2~%06='%92P%02%00%05L%00%04doFnt%00%25Lorg/a%057%00/%017</sdk/transforms/%01=D;L%00%0ainputCodert%00%22LN5%00%00c%01%1d%04s/%05$%012$mainOutput^g%00%5cvalues/TupleTag;L%00%0esideI%01k%c8Viewst%00%14Ljava/lang/Iterable;L%00%11windowingStrategyt%00.R%96%00%0dd%00W>0%00%18;xpsr%00,N5%01%19%fe%90.MapElements$1%0e%05I%1e%f4%84%8d%b0%02%00%01L%00%06this$0t%00,Rw%00%19D%00/%1dD%10;xr%00#zs%00!q(%acD#%06%ce%93%bd%9d%02%00%00%05%a7%00*z4%00%1dc%1cX3!%c8-%fb%25X%05%a5%14%02fnt%00+~%a1%00$Contextful%01%a0%00)zl%00%04PTQ%1d +%16Uq%88%89f%c7%03%01%a6%08xsr%82;%00%19i%5c%e2%8b%e4%16w%ea_%ee%02%00%02L%00%07closuret%00%12=%ee<Object;L%00%0crequir)%86%08t%00-~%cf%00%00R%1d/)%e6%00!AD%00.AD%f0F.invoke.SerializedLambdaoa%d0%94,)6%85%02%00%0aI%00%0eimplMethodKind[%00%0ccapturedArgst%00%13[N%a7%00%00%0e%09%25(ingClasst%00%11%1d&%05%13X;L%00%18functionalInterface%05%1c6%fc%00%04St%01H%0c;L%00%1dJ0%00%00M%05%9a,Nameq%00~%00%16L%00%22b%25%00%1cSignatur%11*%10%09impl%05p%0d;%1d%eb%1dQ%00%13%01'%09g>B%000%16instantiated%09#%08Typ%09`%1cxp%00%00%00%06ur1!)r-%c8%1c%90%ceX%9f%10s)lE%d3%1c%00%00%00%01sr%00'zk%02%00V%85 $$1^D%17%1f%a6%97%f7%feE%d4uy%00'~%09%02%09?A%d4%00-zi%00%00S%01%f1%04eF-%9c%1cb%a2%ef%dajq%cet%05oeC%005~k%00QP%81%9f%11G%08;xp%81c%00%25z|%00%09%a6%1c%cf%b7i%94%abEA%08!%1f!%9c%08%0dxv%01%07%04%0ft%85%a3%00/%a9%d8R%a1%05yU%00$%a1%d1$%05applyt%00%5c(]%7f-%84~%c6%002K%00%00$%0d%0e%04;)FI%00%00te%eb%96%96%00%0ct%00%14ledD$fn$79bf234f$1t%00%91(~%90%00RV%01F%8e%00~G%00%0d%c9%04fu!%22n%d7%00!r%10$sr%00+z%b3%01.b%04%1c>!%9aY%1dz0fE-%00%0a%d5%bf%0cst%00%16%09%aa%e1%83%14/Collee%f9%89%92%00%1f%85%92%01%1b%00.%19%1bHs$EmptyListz%b8%17%b4<%a7%9e%deA%0fAE%00%22N%92%00%e9q%08.Kv%e5s%1cj%00%bd%b9%1d%a3%ca6%a5S%0c%08key%05%16%01%d3%0c%02L%00%0a%e5%07%19%12%04xrVT%06%0dS%10Struc%818%00d%053%1cs%bf%12%0e%d5%d46%11%01%8e%08r%00 j%8c%00%05/%1cC%dd%d5%89%ae%bc~%f8%01/%01%bd%00&j1%00%10VarIn%16X%08%1c%c0K2%da%a9KVh%017%00rr5%00%14Atomic%05l%1c%c7%ec%b5%cc%85tPF%015%01%ec%00.%85%da%04-s%82%e0%00%18ingUtf8%05E%1cL%0d}%1d%cb%01%cd%a4%11E%002%01J%046sZ%ac%07%25K%08s.T%1a%b6%08H%b3%18yf[%c0z%b5%02%00%02Z%00%09gener%a1%1c%10L%00%02id%01H%18%16xp%01t%00BN%04%01%0dJ%00PY%03|.<init>:329#8bf72308025c8f5fsr%00e>F%00Prepackaged.beam_sdks_A%5c8_core.com.googl%05%0b%10mon.cI%89%14.Immut%81%aeAn%00$qi%18edForm%00%0d%01%18%02%00%01[%00%08e%1a%00%09%01%cc%0c%14xpu%01%08%00%18%01%22^?%09%0d%d6Br%09H%a4Mf$.%cc%15%e5%02%00%0bZ%00%18allow%e1%7fTtenessSpecifiedZ%00%0dmode%1d%10D%1atimestampCombiner%1d%1d%14%10trigg%1d%13%08L%00%0f:[%00%0ct%00%18L%0e%b0%0a%10joda/%01L%10/Dura%e1%85%0c;L%00%0f%0e|%084ingBehaviort%00A%05-jq%05%22{%0a%1aU%0a%0c$Clo.C%00%0c;L%00%04%01%c3%08t%00?RK%00) %0d=%04in%22%c2%0a%1c$Accumul%05%9b%08Mod%0e%e8%0a%18%0eonTime%19%9e%00@RS%00*n%0aB%9e%00%00O2B%00%0e<%0b!%042P%01%08t%00<%a6W%00%01%902>%00%0c;L%00%07-%86%08t%002%aaI%00)%ba%0c;L%00%08%09%b5%c1%bf%003%a6@%00Ia%00F%a1RM%8f%00%16a%1f!%e7%00.%01%e3%00.1%e7%1c%00%00%02?zQ%ce%d6a%df%08r%00%1f6%25%00 base.Base%1d.DY%19:%f4%8e%02%00%01J%00%07iMillis%12%db%08%05%01%0c~r%00?%01BI!ev%12j%0d9%83%00.%09%ce%0cing.%09%a3>!%02%05H$%00%00%00%12%00%00xr%00%0ea%af%00.%12%9d%0a%08Enuu}%01%1d`pt%00%11FIRE_IF_NON_EMPTY~r%00=N%81%00IW%0dsnW%02%01{%01%01%01ba%cd8Jt%00%16DISCARDING_%01q(D_PANES~r%00>Nk%00n%ec%006o%02%01h%01%01%1dl%00%0b%01a%14_ALWAY%01a%00:%a2a%00By%02%01Y%01%01%1d]D%0dEND_OF_WINDOWsr%007%a2_%00%18DefaultM%96%1c%b1%0a%e3%87%d1%bd:sI4%000%a2F%00%0d?%1c6M3!y%faA%0f%12%16%08%0c%0bsub%0d%18%0cst%00%10*%17%08%a1}%08;xp!%86%10,sr%006%a2g%00%14GlobalI_ s%96%16%b9%14%02%8a%af%0f%09%ac%00;%a2E%00$NonMerging%09I$FnW%06%0bg%d3%ee%a8%ab%09J%001%a2J%00%11@0%c6%04%19y%ba%8a%96W%02%00%00xp"
+      },
+      "non_parallel_inputs" : { },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Values/Values/Map"
+      },
+      "user_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "org.apache.beam.sdk.transforms.MapElements$1"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.MapElements",
+        "key" : "class",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.sdk.transforms.Values$1",
+        "shortValue" : ""
+      }, {
+        "namespace" : "org.apache.beam.sdk.transforms.ParDo$SingleOutput",
+        "key" : "fn",
+        "type" : "JAVA_CLASS",
+        "value" : "org.apache.beam.sdk.transforms.MapElements$1",
+        "shortValue" : "",
+        "label" : "Transform Function"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "org.apache.beam.sdk.values.PCollection.<init>:329#c6bc66e4fa08de96",
+        "step_name" : "s10"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "org.apache.beam.sdk.values.PCollection.<init>:329#8bf72308025c8f5f"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "JdbcIO.Read/JdbcIO.ReadAll/JdbcIO.Reparallelize/Reshuffle.ViaRandomKey/Values/Values/Map.out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "kind:pair",
+            "is_pair_like" : {
+              "@type" : "http://schema.org/Boolean",
+              "value" : true
+            },
+            "component_encodings" : [ {
+              "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+            }, {
+              "@type" : "org.apache.beam.sdk.coders.StringUtf8Coder"
+            } ]
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "kind" : "ParallelDo",
+    "name" : "s12",
+    "properties" : {
+      "serialized_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "%82SNAPPY%00%00%00%00%01%00%00%00%01%00%00%05%1a%c1%13%f0C%ac%ed%00%05sr%00!org.apache.beam.sdk.util.DoFnInfo%fe%b2~%06='%92P%02%00%05L%00%04doFnt%00%25Lorg/a%057%00/%017</sdk/transforms/%01=D;L%00%0ainputCodert%00%22LN5%00%00c%01%1d%04s/%05$%012$mainOutput^g%00%5cvalues/TupleTag;L%00%0esideI%01k%c8Viewst%00%14Ljava/lang/Iterable;L%00%11windowingStrategyt%00.R%96%00%0dd%00W>0%00%d0;xpsr%00%1fcom.click.example.SqlDataflow$2%c6I%f4%adM%1cj%fd%02%00%00xr%00#Nc%019,%25i(%acD#%06%ce%93%bd%9d%02%00%00%05b%00%22N4%00)+%08.Kv%25-@j%00%bd%b9%1d%a3%ca6%02%00%02L%00%08key%05%16%08q%00~%01%10%00%0a%05%c1%19%12%0cxr%00*jS%00$Structured%053%1cs%bf%12%0e%d5%d46%11%01%8e%08r%00 j9%00%05/%1cC%dd%d5%89%ae%bc~%f8%01/!%1fzj%00%18ingUtf8%05;%1cL%0d}%1d%cb%01%cd%a4%01;%08r%00&jj%00%14Atomic%055%1c%c7%ec%b5%cc%85tPF%015%01%f0%00%0b%01%05%08%10srVj%01%25%0a%08s.TM/x%b3%18yf[%c0z%b5%02%00%02Z%00%09generatedL%00%02idt%00%12]9%04St%01%ab%18;xp%01t%00BN%9a%00%0dZ%98PCollection.<init>:329#f6e89c42901d787aA8A%96i^%194Hs$EmptyListz%b8%17%b4<%a7%9e%de%01%d9!I%00,jv%00B%9b%02%b0%a4Mf$.%cc%15%e5%02%00%0bZ%00%18allowedLatenessSpecifiedZ%00%0dmode%1d%10D%1atimestampCombiner%1d%1d%14%10trigg%1d%13%08L%00%0f:[%00%0ct%00%18La%d9%10joda/%01L%10/Dura!%0eT;L%00%0fclosingBehaviort%00A%05-%89rR;%04u%a4m~%04$C6C%00%0c;L%00%04%01%c3%08t%00?RK%00)%96%0d=%10ingSt!%e1$gy$Accumul%05%9b%08Mod%81%11%18%0eonTime%19%9e%00@RS%00y%adF%9e%00%00O2B%00%81e!%042P%01%08t%00<%a6W%00%01%902>%00%0c;L%00%07-%86%08t%002%aaI%00)%ba%0c;L%00%08)S%10Fnt%003%a6@%00Ia0Fn;xp%00%00%00%00sr%00%16A%8f!%e7%00.%01%e3%00.1%e7%1c%00%00%02?zQ%ce%d6A%b6%08r%00%1f6%25%00 base.Base%1d.DY%19:%f4%8e%02%00%01J%00%07iMillis%09c%01%01%0c~r%00?%01BI!%00.%c1%5c%c5%939%83%00.%09%ce%0cing.%09%a3>!%02%01G%01%01%00%12%a5~%00%0eet%c1%0a%10.Enum%01%19%01%01%01%1d`pt%00%11FIRE_IF_NON_EMPTY~r%00=N%81%00IW%0dsnW%02%01^%01%01%01b%81%998$t%00%16DISCARDING_%01q(D_PANES~r%00>Nk%00n%ec%006o%02%01h%01%01%1dl%00%0b%01a%14_ALWAY%01a%00:%a2a%00By%02%01Y%01%01%1d]D%0dEND_OF_WINDOWsr%007%a2_%00%18DefaultM%96%1c%b1%0a%e3%87%d1%bd:sI4%000%a2F%00%0d?@6M3!y%faA%0f%02%00%01L%00%0bsub%0d%18%0cst%00%10%a9%c2%0e%c3%08%00/%a1T%08;xp!%86%10%16sr%006%a2g%00%14GlobalI_ s%96%16%b9%14%02%8a%af%0f%09%ac%00;%a2E%00$NonMerging%09I$FnW%06%0bg%d3%ee%a8%ab%09J%001%a2J%00%11@0%c6%04%19y%ba%8a%96W%02%00%00xp"
+      },
+      "non_parallel_inputs" : { },
+      "user_name" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "ParDo(Anonymous)"
+      },
+      "user_fn" : {
+        "@type" : "http://schema.org/Text",
+        "value" : "com.click.example.SqlDataflow$2"
+      },
+      "display_data" : [ {
+        "namespace" : "org.apache.beam.sdk.transforms.ParDo$SingleOutput",
+        "key" : "fn",
+        "type" : "JAVA_CLASS",
+        "value" : "com.click.example.SqlDataflow$2",
+        "shortValue" : "",
+        "label" : "Transform Function"
+      } ],
+      "parallel_input" : {
+        "@type" : "OutputReference",
+        "output_name" : "org.apache.beam.sdk.values.PCollection.<init>:329#8bf72308025c8f5f",
+        "step_name" : "s11"
+      },
+      "output_info" : [ {
+        "output_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "org.apache.beam.sdk.values.PCollection.<init>:329#f6e89c42901d787a"
+        },
+        "user_name" : {
+          "@type" : "http://schema.org/Text",
+          "value" : "ParDo(Anonymous).out0"
+        },
+        "encoding" : {
+          "@type" : "kind:windowed_value",
+          "is_wrapper" : {
+            "@type" : "http://schema.org/Boolean",
+            "value" : true
+          },
+          "component_encodings" : [ {
+            "@type" : "org.apache.beam.sdk.coders.VoidCoder"
+          }, {
+            "@type" : "kind:global_window"
+          } ]
+        }
+      } ]
+    }
+  } ],
+  "type" : "JOB_TYPE_BATCH"
+}
