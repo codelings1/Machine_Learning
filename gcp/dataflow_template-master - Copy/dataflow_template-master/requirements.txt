@@ -13,6 +13,6 @@ google-cloud-pubsub==0.35.4
 google-gax==0.15.15
 googleapis-common-protos==1.5.3
 grpc-google-pubsub-v1==0.8.1
-grpcio==1.13.0
+grpcio==1.53.0
 proto-google-cloud-pubsub-v1==0.15.4
 protobuf==3.6.0
