@@ -2,7 +2,7 @@
   "name": "helloPubSub",
   "version": "0.0.1",
   "dependencies": {
-    "googleapis": "37.1.0",
+    "googleapis": "59.0.0",
     "@google-cloud/pubsub": "^0.18.0"
   }
 }
