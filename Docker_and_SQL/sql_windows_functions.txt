@@ -1,3 +1,5 @@
 https://www.toptal.com/sql/intro-to-sql-windows-functions
 
 https://www.sqlshack.com/use-window-functions-sql-server/
+
+https://datalemur.com/questions?category=SQL
